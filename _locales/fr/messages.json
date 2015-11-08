@@ -1,0 +1,95 @@
+{
+	//manifest.json
+	"appName": {
+		"message": "Splat Rotations",
+		"description": "The title of the application, displayed in the web store."
+	},
+
+	"appDesc": {
+		"message": "Récupère les rotations des maps Splatoon sans devoir se connecter à SplatNet.", 
+		"description":"The description of the application, displayed in the web store."
+	},
+	
+	//popup.js
+	
+	"loading": {
+		"message": "Chargement...",
+		"description": "Placeholder text before displaying rotations."
+	},
+	
+	"nextRotation": {
+		"message": "Prochaine rotation à "
+	},
+	
+	"currentRotation": {
+		"message": "En ce moment"
+	},
+	
+	"regularBattle": {
+		"message": "Match classique"
+	},
+	
+	"rankedBattle": {
+		"message": "Match pro"
+	},
+	
+	"splat": {
+		"message": "Défense de Zone"
+	},
+	
+	"tower": {
+		"message": "Expédition Risquée"
+	},
+	
+	"rainmaker": {
+		"message": "Mission Bazookarpe"
+	},
+	
+	"arowana": {
+		"message": "Centre Arowana"
+	},
+	
+	"blackbelly": {
+		"message": "Skatepark Mako"
+	},
+	
+	"bluefin": {
+		"message": "Mine Marine"
+	},
+	
+	"camp": {
+		"message": "Hippo-Camping"
+	},
+	
+	"flounder": {
+		"message": "Lotissement Filament"
+	},
+	
+	"hammerhead": {
+		"message": "Pont Esturgeon"
+	},
+	
+	"kelp": {
+		"message": "Serre Goémon"
+	},
+	
+	"moray": {
+		"message": "Tours Girelle"
+	},
+	
+	"port": {
+		"message": "Docks Haddock"
+	},
+	
+	"saltspray": {
+		"message": "Station Doucebrise"
+	},
+	
+	"urchin": {
+		"message": "Passage Turbot"
+	},
+	
+	"walleye": {
+		"message": "Encrepôt"
+	}
+}

@@ -1,0 +1,95 @@
+{
+	//manifest.json
+	"appName": {
+		"message": "Splat Rotations",
+		"description": "The title of the application, displayed in the web store."
+	},
+
+	"appDesc": {
+		"message": "Fetch the current and upcoming Splatoon rotations without SplatNet log in.", 
+		"description":"The description of the application, displayed in the web store."
+	},
+	
+	//popup.js
+	
+	"loading": {
+		"message": "Loading...",
+		"description": "Placeholder text before displaying rotations."
+	},
+	
+	"nextRotation": {
+		"message": "Next Rotation at "
+	},
+	
+	"currentRotation": {
+		"message": "Current Rotation"
+	},
+	
+	"regularBattle": {
+		"message": "Regular Battle"
+	},
+	
+	"rankedBattle": {
+		"message": "Ranked Battle"
+	},
+	
+	"splat": {
+		"message": "Splat Zones"
+	},
+	
+	"tower": {
+		"message": "Tower Control"
+	},
+	
+	"rainmaker": {
+		"message": "Rainmaker"
+	},
+	
+	"arowana": {
+		"message": "Arowana Mall"
+	},
+	
+	"blackbelly": {
+		"message": "Blackbelly Skatepark"
+	},
+	
+	"bluefin": {
+		"message": "Bluefin Depot"
+	},
+	
+	"camp": {
+		"message": "Camp Triggerfish"
+	},
+	
+	"flounder": {
+		"message": "Flounder Heights"
+	},
+	
+	"hammerhead": {
+		"message": "Hammerhead Bridge"
+	},
+	
+	"kelp": {
+		"message": "Kelp Dome"
+	},
+	
+	"moray": {
+		"message": "Moray Towers"
+	},
+	
+	"port": {
+		"message": "Port Mackerel"
+	},
+	
+	"saltspray": {
+		"message": "Saltspray Rig"
+	},
+	
+	"urchin": {
+		"message": "Urchin Underpass"
+	},
+	
+	"walleye": {
+		"message": "Walleye Warehouse"
+	}
+}

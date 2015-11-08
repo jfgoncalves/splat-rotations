@@ -1,0 +1,131 @@
+@font-face{
+  font-family:'Project Paintball';
+  src: url('assets/project_paintball.otf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url('assets/bg-light.jpg');
+	width: 400px;
+
+}
+
+#refresh {
+	text-align: right;
+	padding: 4px 4px 0 4px;
+	clear: both;
+	cursor: inherit;
+}
+
+#rotations {
+	padding: 0 4px 0 4px;
+}
+
+#rotations > div {
+	background-color: rgba(0, 0, 0, 0.0);
+	border-radius: 3px;
+	margin: 30px auto 30px auto;
+}
+
+#rotations > div:first-child {
+	margin: 15px auto 30px auto;
+}
+
+div.time.rotation0 {
+	margin: 0 auto 10px auto;
+}
+
+.time {
+	margin: 20px auto 0 auto;
+	color: #de0346;
+	font-size: 2em;
+	font-family: 'Project Paintball';
+}
+
+.regular, .ranked {
+	margin: 20px auto 30px auto;
+}
+
+.map {
+	width: 194px;
+}
+
+.map0 {
+	margin-right: 4px;
+}
+
+.map0, .map1 {
+	display: inline-block;
+}
+
+h1, .name, .mode, .time {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Project Paintball';
+	margin-bottom: 10px;
+}
+
+.name {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-top: 3px;
+}
+
+.mode {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 8px;
+	margin-top: -10px;
+}
+
+.regular h1::before {
+	content: url('assets/modes/regular.png');
+	padding-right: 6px;
+	vertical-align: -20%;
+}
+
+.ranked h1::before {
+	content: url('assets/modes/ranked.png');
+	padding-right: 6px;
+	vertical-align: -20%;
+}
+
+.splat::before {
+	content: url('assets/modes/splat.png');
+	padding-right: 6px;
+	vertical-align: -25%;
+}
+
+.tower::before {
+	content: url('assets/modes/tower.png');
+	padding-right: 6px;
+	vertical-align: -25%;
+}
+
+.rainmaker::before {
+	content: url('assets/modes/rainmaker.png');
+	padding-right: 6px;
+	vertical-align: -25%;
+}
+
+hr {
+	width: 200px;
+	margin: auto;
+	border: 1px solid rgb(36, 113, 191);
+}
+
+#rotations > div:last-child hr {
+	display: none;
+}
+
+#load {
+	text-align: center;
+	font-size: 3em;
+	font-family: 'Project Paintball';
+}
