@@ -88,7 +88,7 @@ function parseRotations(data) {
         	// Map Image
 			var mapRegularImage = document.createElement('img');
 			mapRegularImage.className = "map";
-			mapRegularImage.src = "assets/stages/"+String(mapName).split(' ')[0]+".jpg";
+			mapRegularImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
 			mapRegular.appendChild(mapRegularImage);
             
             // Map Name
@@ -110,7 +110,7 @@ function parseRotations(data) {
 	        // Map Image
 			var mapRankedImage = document.createElement('img');
 			mapRankedImage.className = "map";
-			mapRankedImage.src = "assets/stages/"+String(mapName).split(' ')[0]+".jpg";
+			mapRankedImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
 			mapRanked.appendChild(mapRankedImage);
 			
 			// Map Name
