@@ -91,5 +91,56 @@
 	
 	"walleye": {
 		"message": "Walleye Warehouse"
+	},
+	
+	//options.js
+	
+	"timeFormatLabel": {
+		"message": "Time Format",
+		"description": "Title for choosing the time format"
+	},
+	
+	"12hoursLabel": {
+		"message": "12 hours",
+		"description": "Label for selecting the 12 hour format"
+	},
+	
+	"24hoursLabel": {
+		"message": "24 hours",
+		"description": "Label for selecting the 24 hour format"
+	},
+	
+	"regionLabel": {
+		"message": "Splatfest region",
+		"description": "Label for choosing the region of the user"
+	},
+	
+	"regionJP": {
+		"message": "Japan",
+		"description": "Japan choice in the region dropdown option"
+	},
+	
+	"regionUS": {
+		"message": "United States",
+		"description": "United States choice in the region dropdown option"
+	},
+	
+	"regionEU": {
+		"message": "Europe",
+		"description": "Europe choice in the region dropdown option"
+	},
+	
+	"mapsThumbnailsLabel": {
+		"message": "Map thumbnails"
+	},
+	
+	"mapsInked": {
+		"message": "With ink",
+		"description": "Load the maps thumbnails with ink in them"
+	},
+	
+	"mapsNotInked": {
+		"message": "Without ink",
+		"description": "Load the maps thumbnails without ink in them"
 	}
 }

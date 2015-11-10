@@ -91,5 +91,56 @@
 	
 	"walleye": {
 		"message": "Encrepôt"
+	},
+		
+	//options.js
+	
+	"timeFormatLabel": {
+		"message": "Format de l'heure :",
+		"description": "Label for choosing the time format"
+	},
+	
+	"12hoursLabel": {
+		"message": "12 heures",
+		"description": "Label for selecting the 12 hour format"
+	},
+	
+	"24hoursLabel": {
+		"message": "24 heures",
+		"description": "Label for selecting the 24 hour format"
+	},
+	
+	"regionLabel": {
+		"message": "Région du Festival :",
+		"description": "Label for choosing the region of the user"
+	},
+	
+	"regionJP": {
+		"message": "Japon",
+		"description": "Japan choice in the region dropdown option"
+	},
+	
+	"regionUS": {
+		"message": "États-Unis",
+		"description": "United States choice in the region dropdown option"
+	},
+	
+	"regionEU": {
+		"message": "Europe",
+		"description": "Europe choice in the region dropdown option"
+	},
+	
+	"mapsThumbnailsLabel": {
+		"message": "Miniatures des maps :"
+	},
+	
+	"mapsInked": {
+		"message": "Avec encre",
+		"description": "Load the maps thumbnails with ink in them"
+	},
+	
+	"mapsNotInked": {
+		"message": "Sans encre",
+		"description": "Load the maps thumbnails without ink in them"
 	}
 }

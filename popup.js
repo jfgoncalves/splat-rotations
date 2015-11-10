@@ -42,7 +42,7 @@ function parseRotations(data) {
     	if ([rotation] == 0) {
 	    	nextRotation = chrome.i18n.getMessage("currentRotation");
 	    	
-    	} else if (navigator.language.substring(0, 2) == 'en') {
+    	} else if (localStorage.getItem("timeFormat") == '12') {
 	    	nextRotation = chrome.i18n.getMessage("nextRotation")+startTime.toLocaleTimeString('en-US').replace(':00 ', ' ');
     	} else {
 	    	nextRotation = chrome.i18n.getMessage("nextRotation")+startTime.toLocaleTimeString('fr-FR').replace(':00:00', 'h00');
@@ -88,7 +88,11 @@ function parseRotations(data) {
         	// Map Image
 			var mapRegularImage = document.createElement('img');
 			mapRegularImage.className = "map";
-			mapRegularImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
+			if (localStorage.getItem("setInk") == 'notInked') {
+				mapRegularImage.src = "assets/stages/alpha/"+String(mapName).split(' ')[0]+".jpg";
+			} else {
+				mapRegularImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
+			}
 			mapRegular.appendChild(mapRegularImage);
             
             // Map Name
@@ -110,7 +114,12 @@ function parseRotations(data) {
 	        // Map Image
 			var mapRankedImage = document.createElement('img');
 			mapRankedImage.className = "map";
-			mapRankedImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
+			if (localStorage.getItem("setInk") == 'notInked') {
+				mapRankedImage.src = "assets/stages/alpha/"+String(mapName).split(' ')[0]+".jpg";
+			} else {
+				mapRankedImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
+			}
+			
 			mapRanked.appendChild(mapRankedImage);
 			
 			// Map Name
