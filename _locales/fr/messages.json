@@ -25,14 +25,6 @@
 		"message": "En ce moment"
 	},
 	
-	"regularBattle": {
-		"message": "Match classique"
-	},
-	
-	"rankedBattle": {
-		"message": "Match pro"
-	},
-	
 	"splat": {
 		"message": "Défense de Zone"
 	},

@@ -60,15 +60,17 @@ function parseRotations(data) {
         var divRegular = document.createElement('div');
         divRegular.className = "regular";
         eachRotation.appendChild(divRegular);
-        var h1Regular = document.createElement('h1');
-        h1Regular.innerHTML = chrome.i18n.getMessage("regularBattle");
+        var h1Regular = document.createElement('img');
+        h1Regular.className = "imgMode";
+        h1Regular.src = "assets/modes/regular.png";
         divRegular.appendChild(h1Regular);
         
         var divRanked = document.createElement('div');
         divRanked.className = "ranked";
         eachRotation.appendChild(divRanked);
-        var h1Ranked = document.createElement('h1');
-        h1Ranked.innerHTML = chrome.i18n.getMessage("rankedBattle");
+        var h1Ranked = document.createElement('img');
+        h1Ranked.className = "imgMode";
+        h1Ranked.src = "assets/modes/ranked.png";
         divRanked.appendChild(h1Ranked);
         
         // Set ranked mode

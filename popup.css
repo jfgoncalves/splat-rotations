@@ -75,6 +75,7 @@ h1 {
 	font-size: 1.3em;
 	font-weight: bold;
 	margin-top: 3px;
+	color: #2F3335;
 }
 
 .mode {
@@ -82,18 +83,12 @@ h1 {
 	font-weight: bold;
 	margin-bottom: 8px;
 	margin-top: -10px;
+	color: #2F3335;
 }
 
-.regular h1::before {
-	content: url('assets/modes/regular.png');
-	padding-right: 6px;
-	vertical-align: -20%;
-}
-
-.ranked h1::before {
-	content: url('assets/modes/ranked.png');
-	padding-right: 6px;
-	vertical-align: -20%;
+.imgMode {
+	display: block;
+	margin: 0 auto 10px auto;
 }
 
 .splat::before {
@@ -115,9 +110,10 @@ h1 {
 }
 
 hr {
-	width: 200px;
+	width: 360px;
 	margin: auto;
-	border: 1px solid rgb(36, 113, 191);
+	border: 1px solid #2F3335;
+	opacity: 0.8;
 }
 
 #rotations > div:last-child hr {
