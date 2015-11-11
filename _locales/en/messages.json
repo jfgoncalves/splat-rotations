@@ -142,5 +142,10 @@
 	"mapsNotInked": {
 		"message": "Without ink",
 		"description": "Load the maps thumbnails without ink in them"
+	},
+	
+	"savedMessage": {
+		"message": "Saved.",
+		"description": "Text displayed when an option is successfully changed or set"
 	}
 }
