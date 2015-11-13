@@ -41,7 +41,7 @@ function parseRotations(data) {
         var ranked = schedule[rotation].ranked.maps;
         var rankedMode = schedule[rotation].ranked.rulesEN;
         
-    	if ([rotation] === 0) {
+    	if ([rotation] == 0) {
 	    	nextRotation = chrome.i18n.getMessage("currentRotation");
 	    	
     	} else if (localStorage.getItem("timeFormat") == '12') {
@@ -111,7 +111,7 @@ function parseRotations(data) {
             var name = chrome.i18n.getMessage(stringName);
             var mapRegularText = document.createElement('div');
             mapRegularText.className = "name";
-            if (name === '') {
+            if (name == '') {
 				mapRegularText.innerHTML = chrome.i18n.getMessage("unknown");		
 			} else {
 				mapRegularText.innerHTML = name;
@@ -149,7 +149,7 @@ function parseRotations(data) {
 			var name = chrome.i18n.getMessage(stringName);
             var mapRankedText = document.createElement('div');
             mapRankedText.className = "name";
-            if (name === '') {
+            if (name == '') {
 				mapRankedText.innerHTML = chrome.i18n.getMessage("unknown");		
 			} else {
 				mapRankedText.innerHTML = name;
