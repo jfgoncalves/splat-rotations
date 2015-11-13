@@ -94,7 +94,15 @@
 	"walleye": {
 		"message": "Encrepôt"
 	},
-		
+	
+	"museum": {
+		"message": "Galeries Guppy"
+	},
+	
+	"mahi": {
+		"message": "Club Ca$halot"
+	},
+	
 	//options.js
 	
 	"timeFormatLabel": {

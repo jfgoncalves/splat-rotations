@@ -95,6 +95,14 @@
 		"message": "Walleye Warehouse"
 	},
 	
+	"museum": {
+		"message": "Museum d'Alfonsino"
+	},
+	
+	"mahi": {
+		"message": "Mahi-Mahi Resort"
+	},
+	
 	//options.js
 	
 	"timeFormatLabel": {
