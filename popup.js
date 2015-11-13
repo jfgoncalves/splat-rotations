@@ -16,6 +16,8 @@ function retrieveRotations() {
 			// Parse JSON
 			var json = JSON.parse(AJAX_req.responseText)
 			parseRotations(json);
+		} else if (AJAX_req.status == 500) {
+			document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
 		}
 	}
 	AJAX_req.send(null);
