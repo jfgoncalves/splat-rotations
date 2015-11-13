@@ -14,19 +14,19 @@ function retrieveRotations() {
 		if(AJAX_req.readyState == 4 && AJAX_req.status == 200) {
 			
 			// Parse JSON
-			var json = JSON.parse(AJAX_req.responseText)
+			var json = JSON.parse(AJAX_req.responseText);
 			parseRotations(json);
 		} else if (AJAX_req.status == 500) {
 			document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
 		}
-	}
+	};
 	AJAX_req.send(null);
 }
 
 // Parse acquired data
 
 function parseRotations(data) {
-    var updateTime = data.updateTime;
+    //var updateTime = data.updateTime;
     var schedule = data.schedule;
 
 	document.getElementById('rotations').innerHTML = "";
@@ -34,14 +34,14 @@ function parseRotations(data) {
     for (rotation in schedule) {
 	    // Set data
     	var startTime = new Date(schedule[rotation].startTime);
-    	var endTime = new Date(schedule[rotation].endTime);
+    	//var endTime = new Date(schedule[rotation].endTime);
     	var nextRotation;
     	
         var regular = schedule[rotation].regular.maps;
         var ranked = schedule[rotation].ranked.maps;
         var rankedMode = schedule[rotation].ranked.rulesEN;
         
-    	if ([rotation] == 0) {
+    	if ([rotation] === 0) {
 	    	nextRotation = chrome.i18n.getMessage("currentRotation");
 	    	
     	} else if (localStorage.getItem("timeFormat") == '12') {
@@ -77,7 +77,7 @@ function parseRotations(data) {
         
         // Set ranked mode
         var divRankedMode = document.createElement('div');
-        var stringRankedModeName = String(rankedMode).split(' ')[0].toLowerCase()
+        var stringRankedModeName = String(rankedMode).split(' ')[0].toLowerCase();
         divRankedMode.className = "mode "+stringRankedModeName;
         divRankedMode.innerHTML = chrome.i18n.getMessage(stringRankedModeName);
         divRanked.appendChild(divRankedMode);
@@ -103,7 +103,7 @@ function parseRotations(data) {
 			mapRegularImage.onerror = function () { 
 				this.onerror = null;
 			    this.src = "assets/stages/notfound.jpg";
-			}
+			};
 	
 			mapRegular.appendChild(mapRegularImage);
             
@@ -111,7 +111,7 @@ function parseRotations(data) {
             var name = chrome.i18n.getMessage(stringName);
             var mapRegularText = document.createElement('div');
             mapRegularText.className = "name";
-            if (name == '') {
+            if (name === '') {
 				mapRegularText.innerHTML = chrome.i18n.getMessage("unknown");		
 			} else {
 				mapRegularText.innerHTML = name;
@@ -141,7 +141,7 @@ function parseRotations(data) {
 			mapRankedImage.onerror = function () { 
 				this.onerror = null;
 			    this.src = "assets/stages/notfound.jpg";
-			}
+			};
 			
 			mapRanked.appendChild(mapRankedImage);
 			
@@ -149,7 +149,7 @@ function parseRotations(data) {
 			var name = chrome.i18n.getMessage(stringName);
             var mapRankedText = document.createElement('div');
             mapRankedText.className = "name";
-            if (name == '') {
+            if (name === '') {
 				mapRankedText.innerHTML = chrome.i18n.getMessage("unknown");		
 			} else {
 				mapRankedText.innerHTML = name;
