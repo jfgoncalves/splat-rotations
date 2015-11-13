@@ -17,6 +17,10 @@
 		"description": "Placeholder text before displaying rotations."
 	},
 	
+	"error": {
+		"message": "Next rotations unavailable at the moment.",
+		"description": "Displayed when the JSON can't be retrieved"
+	},
 	"nextRotation": {
 		"message": "Next Rotation at "
 	},
