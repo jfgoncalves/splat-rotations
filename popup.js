@@ -77,8 +77,9 @@ function parseRotations(data) {
         
         // Set ranked mode
         var divRankedMode = document.createElement('div');
-        divRankedMode.className = "mode "+String(rankedMode).split(' ')[0].toLowerCase();
-        divRankedMode.innerHTML = chrome.i18n.getMessage(String(rankedMode).split(' ')[0].toLowerCase());
+        var stringRankedModeName = String(rankedMode).split(' ')[0].toLowerCase()
+        divRankedMode.className = "mode "+stringRankedModeName;
+        divRankedMode.innerHTML = chrome.i18n.getMessage(stringRankedModeName);
         divRanked.appendChild(divRankedMode);
         
         // Regular loop
@@ -88,21 +89,33 @@ function parseRotations(data) {
 	        var mapName = regular[map].nameEN;
             var mapRegular = document.createElement('div');
             mapRegular.className = "map"+[map];
+            var stringName = String(mapName).replace('-', ' ').split(' ')[0].toLowerCase();
             
         	// Map Image
 			var mapRegularImage = document.createElement('img');
 			mapRegularImage.className = "map";
 			if (localStorage.getItem("setInk") == 'notInked') {
-				mapRegularImage.src = "assets/stages/alpha/"+String(mapName).split(' ')[0]+".jpg";
+				mapRegularImage.src = "assets/stages/alpha/"+stringName+".jpg";
 			} else {
-				mapRegularImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
+				mapRegularImage.src = "assets/stages/day/"+stringName+".jpg";
 			}
+			
+			mapRegularImage.onerror = function () { 
+				this.onerror = null;
+			    this.src = "assets/stages/notfound.jpg";
+			}
+	
 			mapRegular.appendChild(mapRegularImage);
             
             // Map Name
+            var name = chrome.i18n.getMessage(stringName);
             var mapRegularText = document.createElement('div');
             mapRegularText.className = "name";
-            mapRegularText.innerHTML = chrome.i18n.getMessage(String(mapName).split(' ')[0].toLowerCase());
+            if (name == '') {
+				mapRegularText.innerHTML = chrome.i18n.getMessage("unknown");		
+			} else {
+				mapRegularText.innerHTML = name;
+			}
             mapRegular.appendChild(mapRegularText);
             
             // Add all of this to the DOM
@@ -114,22 +127,33 @@ function parseRotations(data) {
 	        var mapName = ranked[map].nameEN;
 	        var mapRanked = document.createElement('div');
 	        mapRanked.className = "map"+[map];
+	        var stringName = String(mapName).replace('-', ' ').split(' ')[0].toLowerCase();
 	        
 	        // Map Image
 			var mapRankedImage = document.createElement('img');
 			mapRankedImage.className = "map";
 			if (localStorage.getItem("setInk") == 'notInked') {
-				mapRankedImage.src = "assets/stages/alpha/"+String(mapName).split(' ')[0]+".jpg";
+				mapRankedImage.src = "assets/stages/alpha/"+stringName+".jpg";
 			} else {
-				mapRankedImage.src = "assets/stages/day/"+String(mapName).split(' ')[0]+".jpg";
+				mapRankedImage.src = "assets/stages/day/"+stringName+".jpg";
+			}
+			
+			mapRankedImage.onerror = function () { 
+				this.onerror = null;
+			    this.src = "assets/stages/notfound.jpg";
 			}
 			
 			mapRanked.appendChild(mapRankedImage);
 			
 			// Map Name
+			var name = chrome.i18n.getMessage(stringName);
             var mapRankedText = document.createElement('div');
             mapRankedText.className = "name";
-            mapRankedText.innerHTML = chrome.i18n.getMessage(String(mapName).split(' ')[0].toLowerCase());
+            if (name == '') {
+				mapRankedText.innerHTML = chrome.i18n.getMessage("unknown");		
+			} else {
+				mapRankedText.innerHTML = name;
+			}
             mapRanked.appendChild(mapRankedText);
             
             // Add all of this to the DOM

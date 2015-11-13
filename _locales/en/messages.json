@@ -21,6 +21,12 @@
 		"message": "Next rotations unavailable at the moment.",
 		"description": "Displayed when the JSON can't be retrieved"
 	},
+	
+	"unknown": {
+		"message": "Unknown Map",
+		"description": "Displayed when a stage is not recognized by the extension."
+	},
+	
 	"nextRotation": {
 		"message": "Next Rotation at "
 	},
