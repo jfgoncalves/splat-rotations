@@ -28,7 +28,7 @@
 	},
 	
 	"nextRotation": {
-		"message": "Prochaine rotation à "
+		"message": "Prochaine rotation à ",
 		"description": "Displayed before a time element to indicate when is the next rotation"
 	},
 	
