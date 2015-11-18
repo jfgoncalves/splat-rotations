@@ -26,8 +26,6 @@ body {
 }
 
 #rotations > div {
-	background-color: rgba(0, 0, 0, 0.0);
-	border-radius: 3px;
 	margin: 30px auto 30px auto;
 }
 
