@@ -2,12 +2,12 @@
 	//manifest.json
 	"appName": {
 		"message": "Splat Rotations",
-		"description": "The title of the application, displayed in the web store."
+		"description": "The title of the application, displayed in the web store and in Chrome"
 	},
 
 	"appDesc": {
 		"message": "Récupère les rotations des maps Splatoon sans devoir se connecter à SplatNet.", 
-		"description":"The description of the application, displayed in the web store."
+		"description":"The title of the application, displayed in the web store and in Chrome"
 	},
 	
 	//popup.js
@@ -29,10 +29,12 @@
 	
 	"nextRotation": {
 		"message": "Prochaine rotation à "
+		"description": "Displayed before a time element to indicate when is the next rotation"
 	},
 	
 	"currentRotation": {
-		"message": "En ce moment"
+		"message": "En ce moment",
+		"description": "Displayed as the title of the current rotation"
 	},
 	
 	"splat": {
@@ -107,41 +109,42 @@
 	
 	"timeFormatLabel": {
 		"message": "Format de l'heure :",
-		"description": "Label for choosing the time format"
+		"description": "Title in the option page for choosing the time format"
 	},
 	
 	"12hoursLabel": {
 		"message": "12 heures",
-		"description": "Label for selecting the 12 hour format"
+		"description": "Label in the option page for selecting the 12 hour format"
 	},
 	
 	"24hoursLabel": {
 		"message": "24 heures",
-		"description": "Label for selecting the 24 hour format"
+		"description": "Label in the option page for selecting the 24 hour format"
 	},
 	
 	"regionLabel": {
 		"message": "Région du Festival :",
-		"description": "Label for choosing the region of the user"
+		"description": "Title in the option page for choosing the region of the user"
 	},
 	
 	"regionJP": {
 		"message": "Japon",
-		"description": "Japan choice in the region dropdown option"
+		"description": "Choice for Japan in the region dropdown menu"
 	},
 	
 	"regionUS": {
 		"message": "États-Unis",
-		"description": "United States choice in the region dropdown option"
+		"description": "Choice for United States in the region dropdown menu"
 	},
 	
 	"regionEU": {
 		"message": "Europe",
-		"description": "Europe choice in the region dropdown option"
+		"description": "Choice for Europe in the region dropdown menu"
 	},
 	
 	"mapsThumbnailsLabel": {
-		"message": "Miniatures des maps :"
+		"message": "Miniatures des maps :",
+		"description": "Title in the option page for chosing the type of thumbnails"
 	},
 	
 	"mapsInked": {
