@@ -105,6 +105,13 @@
 		"message": "Mahi-Mahi Resort"
 	},
 	
+	//Splatfest
+	
+	"fesTitle": {
+		"message": "Maps for this Splatfest",
+		"description": "Displayed before the maps thumbnails"
+	},
+	
 	//options.js
 	
 	"select": {

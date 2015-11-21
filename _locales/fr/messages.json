@@ -105,6 +105,13 @@
 		"message": "Club Ca$halot"
 	},
 	
+	//Splatfest
+	
+	"fesTitle": {
+		"message": "Maps pour ce Festival",
+		"description": "Displayed before the maps thumbnails"
+	},
+	
 	//options.js
 	
 	"select": {

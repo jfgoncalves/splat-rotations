@@ -9,9 +9,11 @@
 }
 
 body {
-	background: url('assets/bg-light.jpg');
 	width: 400px;
+}
 
+#day {
+	background: url('assets/bg-light.jpg');
 }
 
 #refresh {

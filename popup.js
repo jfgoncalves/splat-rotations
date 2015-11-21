@@ -1,4 +1,47 @@
 // Get Splatoon map rotations using the Splatoon.ink API
+function init() {
+	var region = localStorage.getItem("region");
+	var url = "https://splatoon.ink/schedule.json";
+	
+	if (region == 'jp') {
+		url = "https://s3-ap-northeast-1.amazonaws.com/splatoon-data.nintendo.net/fes_info.json";
+	} /* else if(region == 'eu') {
+  	url = "https://splatoon.ink/schedule_eu.json";
+	} */
+	retrieveFes(url, region);
+}
+
+
+function retrieveFes(url, fes_region) {
+	// Retrieve JSON file
+	var AJAX_req = new XMLHttpRequest();
+	var noCacheJSON = new Date().getTime();
+	AJAX_req.open("GET", url+'?c='+noCacheJSON, true);
+	AJAX_req.setRequestHeader("Content-type", "application/json");
+	
+	AJAX_req.onreadystatechange = function() {
+		
+		// Check if splatoon.ink is up and running
+		if(AJAX_req.readyState == 4 && AJAX_req.status == 200) {
+			
+			// Parse JSON
+			var json = JSON.parse(AJAX_req.responseText);
+			if (json.fes_state == 1) {
+				parseFes(json, fes_region);
+			} else {
+				if(url == "https://splatoon.ink/schedule.json") {
+					parseRotations(json);
+				} else {
+					retrieveRotations();
+				}
+			}
+			
+		} else if (AJAX_req.status == 500) {
+			document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
+		}
+	};
+	AJAX_req.send(null);
+}
 
 function retrieveRotations() {
 	
@@ -23,11 +66,42 @@ function retrieveRotations() {
 	AJAX_req.send(null);
 }
 
-// Parse acquired data
+function parseFes(json, region) {
+	document.getElementById('day').id = "night";
+	document.getElementById('rotations').innerHTML = "";
+	
+	var fes_css = document.createElement('link');
+	fes_css.rel = "stylesheet";
+	fes_css.href = "popup_night.css";
+	document.getElementsByTagName('head')[0].appendChild(fes_css);
+	
+	
+	var fesTitle = document.createElement('img');
+    fesTitle.className = "fesTitle";
+    fesTitle.src = "assets/fes.png";
+    document.getElementById('rotations').appendChild(fesTitle);
+  
+    var title = document.createElement('div');
+    title.className = "title";
+    title.innerHTML = chrome.i18n.getMessage("fesTitle");
+    document.getElementById('rotations').appendChild(title);
+	
+	if (region == 'jp') {
+    	}
+		
+		document.getElementById('rotations').appendChild(fesMapContainer);
+		
+	} else {
+		
+		//
+		// Handle US/EU Splatfest var here
+		//
+		
+	}
+}
 
-function parseRotations(data) {
-    //var updateTime = data.updateTime;
-    var schedule = data.schedule;
+function parseRotations(json) {
+    var schedule = json.schedule;
 
 	document.getElementById('rotations').innerHTML = "";
 	
@@ -169,4 +243,4 @@ function parseRotations(data) {
 }
 
 document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
-retrieveRotations();
+init();

@@ -1,0 +1,52 @@
+@font-face{
+  font-family:'Project Paintball';
+  src: url('assets/project_paintball.otf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 400px;
+}
+
+#night {
+	background: url('assets/bg-dark.jpg');
+}
+
+.fesTitle {
+	width: 400px;
+}
+
+#rotations {
+	text-align: center;
+	padding: 0;
+}
+
+#rotations > div {
+    margin: 0 auto 0 auto;
+}
+
+.fesContainer {
+    margin: 30px auto 30px auto;
+}
+
+.title {
+	color: #fff;
+	font-size: 2em;
+	font-family: 'Project Paintball';
+	margin-top: 15px !important;
+}
+
+.map {
+	width: 300px;
+	height: 169px;
+	border-radius: 4px;
+}
+
+.name {
+	color: #fff;
+	font-size: 1.5em;
+}
