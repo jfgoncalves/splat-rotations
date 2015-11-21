@@ -1,5 +1,4 @@
 {
-	//manifest.json
 	"appName": {
 		"message": "Splat Rotations",
 		"description": "The title of the application, displayed in the web store and in Chrome"
@@ -9,9 +8,7 @@
 		"message": "Récupère les rotations des maps Splatoon sans devoir se connecter à SplatNet.", 
 		"description":"The title of the application, displayed in the web store and in Chrome"
 	},
-	
-	//popup.js
-	
+
 	"loading": {
 		"message": "Chargement...",
 		"description": "Placeholder text before displaying rotations."
@@ -104,16 +101,12 @@
 	"mahi": {
 		"message": "Club Ca$halot"
 	},
-	
-	//Splatfest
-	
+
 	"fesTitle": {
 		"message": "Maps pour ce Festival",
 		"description": "Displayed before the maps thumbnails"
 	},
-	
-	//options.js
-	
+
 	"select": {
     	"message": "Sélectionner...",
     	"description": "Displayed at first launch so the dropdown menus are not empty"

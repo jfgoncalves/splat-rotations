@@ -1,5 +1,4 @@
 {
-	//manifest.json
 	"appName": {
 		"message": "Splat Rotations",
 		"description": "The title of the application, displayed in the web store and in Chrome"
@@ -9,8 +8,6 @@
 		"message": "Display the current and upcoming Splatoon rotations.", 
 		"description":"The description of the application, displayed in the web store and in Chrome"
 	},
-	
-	//popup.js
 	
 	"loading": {
 		"message": "Loading...",
@@ -104,15 +101,11 @@
 	"mahi": {
 		"message": "Mahi-Mahi Resort"
 	},
-	
-	//Splatfest
-	
+
 	"fesTitle": {
 		"message": "Maps for this Splatfest",
 		"description": "Displayed before the maps thumbnails"
 	},
-	
-	//options.js
 	
 	"select": {
     	"message": "Select...",
