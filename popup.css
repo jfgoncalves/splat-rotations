@@ -51,6 +51,7 @@ div.time.rotation0 {
 .map {
 	width: 194px;
 	height: 109px;
+	border-radius: 2px;
 }
 
 .map0 {
