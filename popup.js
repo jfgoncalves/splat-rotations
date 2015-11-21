@@ -1,5 +1,6 @@
-// Get Splatoon map rotations using the Splatoon.ink API
 function init() {
+    
+    //Send the right URL to the program depending on the region set
 	var region = localStorage.getItem("region");
 	var url = "https://splatoon.ink/schedule.json";
 	
@@ -13,7 +14,8 @@ function init() {
 
 
 function retrieveFes(url, fes_region) {
-	// Retrieve JSON file
+    
+    // URL specific on region
 	var AJAX_req = new XMLHttpRequest();
 	var noCacheJSON = new Date().getTime();
 	AJAX_req.open("GET", url+'?c='+noCacheJSON, true);
@@ -21,10 +23,8 @@ function retrieveFes(url, fes_region) {
 	
 	AJAX_req.onreadystatechange = function() {
 		
-		// Check if splatoon.ink is up and running
-		if(AJAX_req.readyState == 4 && AJAX_req.status == 200) {
+		if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
 			
-			// Parse JSON
 			var json = JSON.parse(AJAX_req.responseText);
 			if (json.fes_state == 1) {
 				parseFes(json, fes_region);
@@ -36,7 +36,7 @@ function retrieveFes(url, fes_region) {
 				}
 			}
 			
-		} else if (AJAX_req.status == 500) {
+		} else {
 			document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
 		}
 	};
@@ -45,7 +45,7 @@ function retrieveFes(url, fes_region) {
 
 function retrieveRotations() {
 	
-	// Retrieve JSON file
+	// Basic splatoon.ink
 	var AJAX_req = new XMLHttpRequest();
 	var noCacheJSON = new Date().getTime();
 	AJAX_req.open("GET", 'https://splatoon.ink/schedule.json?c='+noCacheJSON, true);
@@ -53,13 +53,11 @@ function retrieveRotations() {
 	
 	AJAX_req.onreadystatechange = function() {
 		
-		// Check if splatoon.ink is up and running
-		if(AJAX_req.readyState == 4 && AJAX_req.status == 200) {
+		if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
 			
-			// Parse JSON
 			var json = JSON.parse(AJAX_req.responseText);
 			parseRotations(json);
-		} else if (AJAX_req.status == 500) {
+		} else {
 			document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
 		}
 	};
@@ -67,6 +65,8 @@ function retrieveRotations() {
 }
 
 function parseFes(json, region) {
+    
+    // DOM starting
 	document.getElementById('day').id = "night";
 	document.getElementById('rotations').innerHTML = "";
 	
@@ -85,6 +85,8 @@ function parseFes(json, region) {
     title.className = "title";
     title.innerHTML = chrome.i18n.getMessage("fesTitle");
     document.getElementById('rotations').appendChild(title);
+    
+    // Region specific code executed here
 	
 	if (region == 'jp') {
     	
@@ -129,7 +131,6 @@ function parseFes(json, region) {
 }
 
 // This function parse the name of the stages and returns the correct localized name that can be used to parse images and strings.
-// Thanks Nintendo JP to have *** web devs and make this unnecessarily difficult and annoying.
 
 function jpFesParser(name) {
     var stages = {
@@ -157,9 +158,8 @@ function parseRotations(json) {
 	document.getElementById('rotations').innerHTML = "";
 	
     for (rotation in schedule) {
-	    // Set data
+
     	var startTime = new Date(schedule[rotation].startTime);
-    	//var endTime = new Date(schedule[rotation].endTime);
     	var nextRotation;
     	
         var regular = schedule[rotation].regular.maps;
@@ -175,7 +175,7 @@ function parseRotations(json) {
 	    	nextRotation = chrome.i18n.getMessage("nextRotation")+startTime.toLocaleTimeString('fr-FR').replace(':00:00', 'h00');
     	}
         
-        // Set DOM
+        // DOM Starting
         var eachRotation = document.createElement('div');
         eachRotation.id = [rotation];
         
@@ -200,17 +200,14 @@ function parseRotations(json) {
         h1Ranked.src = "assets/modes/ranked.png";
         divRanked.appendChild(h1Ranked);
         
-        // Set ranked mode
         var divRankedMode = document.createElement('div');
         var stringRankedModeName = String(rankedMode).split(' ')[0].toLowerCase();
         divRankedMode.className = "mode "+stringRankedModeName;
         divRankedMode.innerHTML = chrome.i18n.getMessage(stringRankedModeName);
         divRanked.appendChild(divRankedMode);
         
-        // Regular loop
         for (map in regular) {
 	        
-	        // Data
 	        var mapName = regular[map].nameEN;
             var mapRegular = document.createElement('div');
             mapRegular.className = "map"+[map];
@@ -225,6 +222,7 @@ function parseRotations(json) {
 				mapRegularImage.src = "assets/stages/day/"+stringName+".jpg";
 			}
 			
+			// Error handling
 			mapRegularImage.onerror = function () { 
 				this.onerror = null;
 			    this.src = "assets/stages/notfound.jpg";
@@ -243,12 +241,13 @@ function parseRotations(json) {
 			}
             mapRegular.appendChild(mapRegularText);
             
-            // Add all of this to the DOM
+            // Append to the DOM
             divRegular.appendChild(mapRegular);
         }
         
         // Ranked Loop
         for (map in ranked) {
+            
 	        var mapName = ranked[map].nameEN;
 	        var mapRanked = document.createElement('div');
 	        mapRanked.className = "map"+[map];
@@ -263,6 +262,7 @@ function parseRotations(json) {
 				mapRankedImage.src = "assets/stages/day/"+stringName+".jpg";
 			}
 			
+			// Error handling
 			mapRankedImage.onerror = function () { 
 				this.onerror = null;
 			    this.src = "assets/stages/notfound.jpg";
@@ -281,14 +281,14 @@ function parseRotations(json) {
 			}
             mapRanked.appendChild(mapRankedText);
             
-            // Add all of this to the DOM
+            // Append to the DOM
             divRanked.appendChild(mapRanked);
         }
         
         var separator = document.createElement('hr');
         eachRotation.appendChild(separator);
         
-        // Add everything to the document
+        // Append each rotation to the DOM
         document.getElementById('rotations').appendChild(eachRotation);
     }
 }
