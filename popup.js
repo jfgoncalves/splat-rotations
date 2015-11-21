@@ -87,6 +87,34 @@ function parseFes(json, region) {
     document.getElementById('rotations').appendChild(title);
 	
 	if (region == 'jp') {
+    	
+    	var festival = json.fes_stages;
+    	
+    	var fesMapContainer = document.createElement('div');
+    	
+    	for (stage in festival) {
+        	
+        	var fesDiv = document.createElement('div');
+        	fesDiv.className = "fesContainer";
+        	
+        	var fesStageName = jpFesParser(festival[stage].name);
+        	
+        	var fesImage = document.createElement('img');
+    		fesImage.className = "map";
+    		fesImage.src = "assets/stages/night/"+fesStageName+".jpg";
+    		fesDiv.appendChild(fesImage);
+    		
+    		fesImage.onerror = function () { 
+                this.onerror = null;
+			    this.src = "assets/stages/notfoundfes.jpg";
+			};
+    		
+    		var fesMapName = document.createElement('div')
+    		fesMapName.className = "name";
+    		fesMapName.innerHTML = chrome.i18n.getMessage(fesStageName);
+    		fesDiv.appendChild(fesMapName);
+    		
+    		fesMapContainer.appendChild(fesDiv);
     	}
 		
 		document.getElementById('rotations').appendChild(fesMapContainer);
@@ -98,6 +126,29 @@ function parseFes(json, region) {
 		//
 		
 	}
+}
+
+// This function parse the name of the stages and returns the correct localized name that can be used to parse images and strings.
+// Thanks Nintendo JP to have *** web devs and make this unnecessarily difficult and annoying.
+
+function jpFesParser(name) {
+    var stages = {
+        "アロワナモール": "arowana",
+        "Bバスパーク": "blackbelly",
+        "ネギトロ炭鉱": "bluefin",
+        "モンガラキャンプ場": "camp",
+        "ヒラメが丘団地": "flounder",
+        "マサバ海峡大橋": "hammerhead",
+        "モズク農園": "kelp",
+        "タチウオパーキング": "moray",
+        "キンメダイ美術館": "museum",
+        "ホッケふ頭": "port",
+        "シオノメ油田": "saltspray",
+        "デカライン高架下": "urchin",
+        "ハコフグ倉庫": "walleye",
+        "マヒマヒリゾート＆スパ": "mahi"
+    };
+    return stages[name];
 }
 
 function parseRotations(json) {
