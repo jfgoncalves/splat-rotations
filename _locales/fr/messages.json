@@ -107,6 +107,11 @@
 	
 	//options.js
 	
+	"select": {
+    	"message": "Sélectionner...",
+    	"description": "Displayed at first launch so the dropdown menus are not empty"
+	},
+	
 	"timeFormatLabel": {
 		"message": "Format de l'heure :",
 		"description": "Title in the option page for choosing the time format"

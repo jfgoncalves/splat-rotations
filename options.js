@@ -1,5 +1,8 @@
 function localize_options() {
 
+document.getElementById('select1').innerHTML = chrome.i18n.getMessage("select");
+document.getElementById('select2').innerHTML = chrome.i18n.getMessage("select");
+document.getElementById('select3').innerHTML = chrome.i18n.getMessage("select");
 document.getElementById('timeFormatLabel').innerHTML = chrome.i18n.getMessage("timeFormatLabel");
 document.getElementById('12hoursLabel').innerHTML = chrome.i18n.getMessage("12hoursLabel");
 document.getElementById('24hoursLabel').innerHTML = chrome.i18n.getMessage("24hoursLabel");
