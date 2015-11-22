@@ -5,7 +5,7 @@ function init() {
 	var url = "https://splatoon.ink/schedule.json";
 	
 	if (region == 'jp') {
-		url = "https://s3-ap-northeast-1.amazonaws.com/splatoon-data.nintendo.net/fes_info.json";
+		url = "http://s3-ap-northeast-1.amazonaws.com/splatoon-data.nintendo.net/fes_info.json";
 	} /* else if(region == 'eu') {
   	url = "https://splatoon.ink/schedule_eu.json";
 	} */
