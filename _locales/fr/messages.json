@@ -138,12 +138,12 @@
 	},
 	
 	"regionUS": {
-		"message": "États-Unis",
+		"message": "Amérique du Nord",
 		"description": "Choice for United States in the region dropdown menu"
 	},
 	
 	"regionEU": {
-		"message": "Europe",
+		"message": "Europe / Océanie",
 		"description": "Choice for Europe in the region dropdown menu"
 	},
 	
