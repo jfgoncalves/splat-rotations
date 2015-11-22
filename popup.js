@@ -99,7 +99,7 @@ function parseFes(json, region) {
         	var fesDiv = document.createElement('div');
         	fesDiv.className = "fesContainer";
         	
-        	var fesStageName = jpFesParser(festival[stage].name);
+        	var fesStageName = jpNameParser(festival[stage].name);
         	
         	var fesImage = document.createElement('img');
     		fesImage.className = "map";
@@ -132,8 +132,8 @@ function parseFes(json, region) {
 
 // This function parse the name of the stages and returns the correct localized name that can be used to parse images and strings.
 
-function jpFesParser(name) {
-    var stages = {
+function jpNameParser(name) {
+    var jp_dic = {
         "アロワナモール": "arowana",
         "Bバスパーク": "blackbelly",
         "ネギトロ炭鉱": "bluefin",
@@ -147,9 +147,12 @@ function jpFesParser(name) {
         "シオノメ油田": "saltspray",
         "デカライン高架下": "urchin",
         "ハコフグ倉庫": "walleye",
-        "マヒマヒリゾート＆スパ": "mahi"
+        "マヒマヒリゾート＆スパ": "mahi",
+        "ガチエリア": "splat",
+        "ガチホコ": "rainmaker",
+        "ガチヤグラ": "tower"
     };
-    return stages[name];
+    return jp_dic[name];
 }
 
 function parseRotations(json) {
@@ -164,7 +167,7 @@ function parseRotations(json) {
     	
         var regular = schedule[rotation].regular.maps;
         var ranked = schedule[rotation].ranked.maps;
-        var rankedMode = schedule[rotation].ranked.rulesEN;
+        var rankedMode = schedule[rotation].ranked.rulesJP;
         
     	if ([rotation] == 0) {
 	    	nextRotation = chrome.i18n.getMessage("currentRotation");
@@ -201,25 +204,23 @@ function parseRotations(json) {
         divRanked.appendChild(h1Ranked);
         
         var divRankedMode = document.createElement('div');
-        var stringRankedModeName = String(rankedMode).split(' ')[0].toLowerCase();
-        divRankedMode.className = "mode "+stringRankedModeName;
-        divRankedMode.innerHTML = chrome.i18n.getMessage(stringRankedModeName);
+        divRankedMode.className = "mode "+jpNameParser(rankedMode);
+        divRankedMode.innerHTML = chrome.i18n.getMessage(jpNameParser(rankedMode));
         divRanked.appendChild(divRankedMode);
         
         for (map in regular) {
 	        
-	        var mapName = regular[map].nameEN;
+	        var mapName = regular[map].nameJP;
             var mapRegular = document.createElement('div');
             mapRegular.className = "map"+[map];
-            var stringName = String(mapName).replace('-', ' ').split(' ')[0].toLowerCase();
             
         	// Map Image
 			var mapRegularImage = document.createElement('img');
 			mapRegularImage.className = "map";
 			if (localStorage.getItem("setInk") == 'notInked') {
-				mapRegularImage.src = "assets/stages/alpha/"+stringName+".jpg";
+				mapRegularImage.src = "assets/stages/alpha/"+jpNameParser(mapName)+".jpg";
 			} else {
-				mapRegularImage.src = "assets/stages/day/"+stringName+".jpg";
+				mapRegularImage.src = "assets/stages/day/"+jpNameParser(mapName)+".jpg";
 			}
 			
 			// Error handling
@@ -231,7 +232,7 @@ function parseRotations(json) {
 			mapRegular.appendChild(mapRegularImage);
             
             // Map Name
-            var name = chrome.i18n.getMessage(stringName);
+            var name = chrome.i18n.getMessage(jpNameParser(mapName));
             var mapRegularText = document.createElement('div');
             mapRegularText.className = "name";
             if (name == '') {
@@ -248,18 +249,17 @@ function parseRotations(json) {
         // Ranked Loop
         for (map in ranked) {
             
-	        var mapName = ranked[map].nameEN;
+	        var mapName = ranked[map].nameJP;
 	        var mapRanked = document.createElement('div');
 	        mapRanked.className = "map"+[map];
-	        var stringName = String(mapName).replace('-', ' ').split(' ')[0].toLowerCase();
 	        
 	        // Map Image
 			var mapRankedImage = document.createElement('img');
 			mapRankedImage.className = "map";
 			if (localStorage.getItem("setInk") == 'notInked') {
-				mapRankedImage.src = "assets/stages/alpha/"+stringName+".jpg";
+				mapRankedImage.src = "assets/stages/alpha/"+jpNameParser(mapName)+".jpg";
 			} else {
-				mapRankedImage.src = "assets/stages/day/"+stringName+".jpg";
+				mapRankedImage.src = "assets/stages/day/"+jpNameParser(mapName)+".jpg";
 			}
 			
 			// Error handling
@@ -271,7 +271,7 @@ function parseRotations(json) {
 			mapRanked.appendChild(mapRankedImage);
 			
 			// Map Name
-			var name = chrome.i18n.getMessage(stringName);
+			var name = chrome.i18n.getMessage(jpNameParser(mapName));
             var mapRankedText = document.createElement('div');
             mapRankedText.className = "name";
             if (name == '') {
