@@ -135,7 +135,7 @@ function parseFes(json, region) {
 function jpNameParser(name) {
     var jp_dic = {
         "アロワナモール": "arowana",
-        "Bバスパーク": "blackbelly",
+        "Ｂバスパーク": "blackbelly",
         "ネギトロ炭鉱": "bluefin",
         "モンガラキャンプ場": "camp",
         "ヒラメが丘団地": "flounder",
