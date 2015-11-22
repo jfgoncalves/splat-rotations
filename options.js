@@ -17,31 +17,32 @@ document.getElementById('mapsNotInked').innerHTML = chrome.i18n.getMessage("maps
 }
 
 localize_options();
-	
-var timeValue = document.getElementById('timeFormat');
-var regionValue = document.getElementById('region');
-var inkedValue = document.getElementById('setInk');
+
+var timeValue, regionValue, inkedValue, time, region, setInk;
+
+timeValue = document.getElementById('timeFormat');
+regionValue = document.getElementById('region');
+inkedValue = document.getElementById('setInk');
 
 function saved_status() {
-	var status = document.getElementById("saved");
-	status.innerHTML = '<div class="saved-inner animated fadeIn">'+chrome.i18n.getMessage("savedMessage")+'</div>';
+	document.getElementById("saved").innerHTML = '<div class="saved-inner animated fadeIn">'+chrome.i18n.getMessage("savedMessage")+'</div>';
 }
 
 timeValue.addEventListener('change', function() {
-	var time = timeValue.value;
+	time = timeValue.value;
 	localStorage.setItem("timeFormat", time);
 	saved_status();
-	
+
 });
 
 regionValue.addEventListener('change', function() {
-	var region = regionValue.value;
+	region = regionValue.value;
 	localStorage.setItem("region", region);
 	saved_status();
 });
 
 inkedValue.addEventListener('change', function() {
-	var setInk = inkedValue.value;
+	setInk = inkedValue.value;
 	localStorage.setItem("setInk", setInk);
 	saved_status();
 });
