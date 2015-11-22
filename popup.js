@@ -232,13 +232,12 @@ function parseRotations(json) {
 			mapRegular.appendChild(mapRegularImage);
             
             // Map Name
-            var name = chrome.i18n.getMessage(jpNameParser(mapName));
             var mapRegularText = document.createElement('div');
             mapRegularText.className = "name";
-            if (name == '') {
+            if (jpNameParser(mapName) == undefined) {
 				mapRegularText.innerHTML = chrome.i18n.getMessage("unknown");		
 			} else {
-				mapRegularText.innerHTML = name;
+				mapRegularText.innerHTML = chrome.i18n.getMessage(jpNameParser(mapName));
 			}
             mapRegular.appendChild(mapRegularText);
             
@@ -271,13 +270,12 @@ function parseRotations(json) {
 			mapRanked.appendChild(mapRankedImage);
 			
 			// Map Name
-			var name = chrome.i18n.getMessage(jpNameParser(mapName));
             var mapRankedText = document.createElement('div');
             mapRankedText.className = "name";
-            if (name == '') {
+            if (jpNameParser(mapName) == undefined) {
 				mapRankedText.innerHTML = chrome.i18n.getMessage("unknown");		
 			} else {
-				mapRankedText.innerHTML = name;
+				mapRankedText.innerHTML = chrome.i18n.getMessage(jpNameParser(mapName));
 			}
             mapRanked.appendChild(mapRankedText);
             
