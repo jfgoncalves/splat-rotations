@@ -79,7 +79,7 @@ function parseFes(json, region) {
 
     fes_css = document.createElement('link');
     fes_css.rel = "stylesheet";
-    fes_css.href = "popup_night.css";
+    fes_css.href = "popup_night.min.css";
     document.getElementsByTagName('head')[0].appendChild(fes_css);
 
 
