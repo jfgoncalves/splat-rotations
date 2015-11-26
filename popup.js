@@ -34,12 +34,11 @@ function init() {
 
 function retrieveFes(url, fes_region) {
 
-    var AJAX_req, noCacheJSON, json;
+    var AJAX_req, json;
     // URL specific on region
     AJAX_req = new XMLHttpRequest();
-    noCacheJSON = new Date().getTime();
-    AJAX_req.open("GET", url+'?c='+noCacheJSON, true);
-    AJAX_req.setRequestHeader("Content-type", "application/json");
+    AJAX_req.open("GET", url, true);
+    AJAX_req.setRequestHeader("cache-control", "no-cache");
 
     AJAX_req.onreadystatechange = function() {
 
@@ -56,9 +55,7 @@ function retrieveFes(url, fes_region) {
                 }
             }
 
-        } else if (AJAX_req.readyState == 3) {
-            document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
-        } else if (AJAX_req.status == 403 || 404 || 500 || 503) {
+        } else {
             document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
         }
     };
@@ -67,12 +64,12 @@ function retrieveFes(url, fes_region) {
 
 function retrieveRotations() {
 
-    var AJAX_req, noCacheJSON, json;
+    var AJAX_req, json;
 
     AJAX_req = new XMLHttpRequest();
-    noCacheJSON = new Date().getTime();
-    AJAX_req.open("GET", 'https://splatoon.ink/schedule.json?c='+noCacheJSON, true);
+    AJAX_req.open("GET", 'https://splatoon.ink/schedule.json', true);
     AJAX_req.setRequestHeader("Content-type", "application/json");
+    AJAX_req.setRequestHeader("Cache-Control", "no-cache");
 
     AJAX_req.onreadystatechange = function() {
 
@@ -80,7 +77,7 @@ function retrieveRotations() {
 
             json = JSON.parse(AJAX_req.responseText);
             parseRotations(json);
-        } else if (AJAX_req.status == 403 || 404 || 500 || 503) {
+        } else {
             document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
         }
     };
@@ -328,4 +325,8 @@ function parseRotations(json) {
 }
 
 document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
-init();
+
+
+window.addEventListener("load", function() {
+    init();
+});
