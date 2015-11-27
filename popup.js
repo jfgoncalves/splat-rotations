@@ -23,9 +23,9 @@ function init() {
     region = localStorage.getItem("region");
     url = "https://splatoon.ink/schedule.json";
 
-    if (region == 'jp') {
+    if (region === 'jp') {
         url = "http://s3-ap-northeast-1.amazonaws.com/splatoon-data.nintendo.net/fes_info.json";
-    } /* else if (region == 'eu') {
+    } /* else if (region === 'eu') {
       url = "https://splatoon.ink/schedule_eu.json";
     } */
     retrieveFes(url, region);
@@ -38,6 +38,7 @@ function retrieveFes(url, fes_region) {
     // URL specific on region
     AJAX_req = new XMLHttpRequest();
     AJAX_req.open("GET", url, true);
+    AJAX_req.setRequestHeader("Content-type", "application/json");
     AJAX_req.setRequestHeader("cache-control", "no-cache");
 
     AJAX_req.onreadystatechange = function() {
@@ -45,13 +46,13 @@ function retrieveFes(url, fes_region) {
         if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
 
             json = JSON.parse(AJAX_req.responseText);
-            if (json.fes_state == 1) {
+            if (json.fes_state === 1) {
                 parseFes(json, fes_region);
             } else {
-                if (url == "https://splatoon.ink/schedule.json") {
-                    parseRotations(json);
-                } else {
+                if (fes_region === "jp") {
                     retrieveRotations();
+                } else {
+                    parseRotations(json);
                 }
             }
 
@@ -68,6 +69,7 @@ function retrieveRotations() {
 
     AJAX_req = new XMLHttpRequest();
     AJAX_req.open("GET", 'https://splatoon.ink/schedule.json', true);
+    AJAX_req.setRequestHeader("Content-type", "application/json");
     AJAX_req.setRequestHeader("Cache-Control", "no-cache");
 
     AJAX_req.onreadystatechange = function() {
@@ -109,7 +111,7 @@ function parseFes(json, region) {
 
     // Region specific code executed here
 
-    if (region == 'jp') {
+    if (region === 'jp') {
 
         var festival, fesDiv, fesImage, fesMapName, fesStageName, fesMapContainer, stage;
 
