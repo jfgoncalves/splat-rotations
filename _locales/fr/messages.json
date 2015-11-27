@@ -5,8 +5,8 @@
 	},
 
 	"appDesc": {
-		"message": "Récupère les rotations des maps Splatoon sans devoir se connecter à SplatNet.", 
 		"description":"The title of the application, displayed in the web store and in Chrome"
+		"message": "Affiche les rotations actuelles et à venir des maps Splatoon.", 
 	},
 
 	"loading": {
