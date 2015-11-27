@@ -68,7 +68,6 @@ function retrieveRotations() {
 
     AJAX_req = new XMLHttpRequest();
     AJAX_req.open("GET", 'https://splatoon.ink/schedule.json', true);
-    AJAX_req.setRequestHeader("Content-type", "application/json");
     AJAX_req.setRequestHeader("Cache-Control", "no-cache");
 
     AJAX_req.onreadystatechange = function() {
@@ -201,9 +200,9 @@ function parseRotations(json) {
                 nextRotation = chrome.i18n.getMessage("currentRotation");
 
             } else if (localStorage.getItem("timeFormat") === '12') {
-                nextRotation = chrome.i18n.getMessage("nextRotation")+startTime.toLocaleTimeString('en-US').replace(':00 ', ' ');
+                nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('en-US').replace(':00 ', ' ');
             } else {
-                nextRotation = chrome.i18n.getMessage("nextRotation")+startTime.toLocaleTimeString('fr-FR').replace(':00:00', 'h00');
+                nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('fr-FR').replace(':00:00', 'h00');
             }
 
             // DOM Starting
