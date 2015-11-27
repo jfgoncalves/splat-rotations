@@ -113,7 +113,7 @@
 	},
 
 	"timeFormatLabel": {
-		"message": "Time Format",
+		"message": "Time format:",
 		"description": "Title in the options page for chosing the time format"
 	},
 
@@ -128,7 +128,7 @@
 	},
 
 	"regionLabel": {
-		"message": "Splatfest region",
+		"message": "Splatfest region:",
 		"description": "Title in the options page for chosing the region of the user"
 	},
 
@@ -143,12 +143,12 @@
 	},
 
 	"regionEU": {
-		"message": "Europe / Oceania",
+		"message": "Europe/Oceania",
 		"description": "Choice for Europe/Oceania in the region dropdown option"
 	},
 
 	"mapsThumbnailsLabel": {
-		"message": "Map thumbnails",
+		"message": "Map thumbnails:",
 		"description": "Title in the options page for chosing if thumbnails are shown with or without ink"
 	},
 
