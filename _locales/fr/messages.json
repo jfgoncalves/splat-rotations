@@ -5,28 +5,28 @@
 	},
 
 	"appDesc": {
-		"description":"The title of the application, displayed in the web store and in Chrome"
 		"message": "Affiche les rotations actuelles et à venir des maps Splatoon.", 
+		"description": "The description of the application, displayed in the web store and in Chrome"
 	},
 
 	"loading": {
 		"message": "Chargement...",
-		"description": "Placeholder text before displaying rotations."
+		"description": "Text shown before displaying rotations"
 	},
 	
 	"error": {
 		"message": "Prochaine rotations indisponibles pour le moment.",
-		"description": "Displayed when the JSON can't be retrieved"
+		"description": "Displayed when the data can't be retrieved"
 	},
 	
 	"unknown": {
 		"message": "Map Inconnue",
-		"description": "Displayed when a stage is not recognized by the extension."
+		"description": "Displayed as a stage name when a stage is not recognized by the extension"
 	},
 	
 	"nextRotation": {
-		"message": "Prochaine rotation à ",
-		"description": "Displayed before a time element to indicate when is the next rotation"
+		"message": "Prochaine rotation à",
+		"description": "Displayed before each rotation to indicate when is the next one"
 	},
 	
 	"currentRotation": {
@@ -104,62 +104,62 @@
 
 	"fesTitle": {
 		"message": "Maps pour ce Festival",
-		"description": "Displayed before the maps thumbnails"
+		"description": "Displayed as a title before the maps thumbnails during Splatfest"
 	},
 
 	"select": {
     	"message": "Sélectionner...",
-    	"description": "Displayed at first launch so the dropdown menus are not empty"
+    	"description": "Default option in the menus of the options page"
 	},
 	
 	"timeFormatLabel": {
 		"message": "Format de l'heure :",
-		"description": "Title in the option page for choosing the time format"
+		"description": "Title in the options page for chosing the time format"
 	},
 	
 	"12hoursLabel": {
 		"message": "12 heures",
-		"description": "Label in the option page for selecting the 12 hour format"
+		"description": "Label in the options page for selecting the 12 hour format"
 	},
 	
 	"24hoursLabel": {
 		"message": "24 heures",
-		"description": "Label in the option page for selecting the 24 hour format"
+		"description": "Label in the options page for selecting the 24 hour format"
 	},
 	
 	"regionLabel": {
 		"message": "Région du Festival :",
-		"description": "Title in the option page for choosing the region of the user"
+		"description": "Title in the options page for chosing the region of the user"
 	},
 	
 	"regionJP": {
 		"message": "Japon",
-		"description": "Choice for Japan in the region dropdown menu"
+		"description": "Choice for Japan in the region dropdown option"
 	},
 	
 	"regionUS": {
 		"message": "Amérique du Nord",
-		"description": "Choice for United States in the region dropdown menu"
+		"description": "Choice for North America in the region dropdown option"
 	},
 	
 	"regionEU": {
 		"message": "Europe / Océanie",
-		"description": "Choice for Europe in the region dropdown menu"
+		"description": "Choice for Europe/Oceania in the region dropdown option"
 	},
 	
 	"mapsThumbnailsLabel": {
 		"message": "Miniatures des maps :",
-		"description": "Title in the option page for chosing the type of thumbnails"
+		"description": "Title in the options page for chosing if thumbnails are shown with or without ink"
 	},
 	
 	"mapsInked": {
 		"message": "Avec encre",
-		"description": "Load the maps thumbnails with ink in them"
+		"description": "Choice for loading the maps thumbnails with ink in them"
 	},
 	
 	"mapsNotInked": {
 		"message": "Sans encre",
-		"description": "Load the maps thumbnails without ink in them"
+		"description": "Choice for loading the maps thumbnails without ink in them"
 	},
 	
 	"savedMessage": {

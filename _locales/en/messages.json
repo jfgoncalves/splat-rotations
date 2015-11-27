@@ -6,27 +6,27 @@
 
 	"appDesc": {
 		"message": "Display the current and upcoming Splatoon rotations.", 
-		"description":"The description of the application, displayed in the web store and in Chrome"
+		"description": "The description of the application, displayed in the web store and in Chrome"
 	},
-	
+
 	"loading": {
 		"message": "Loading...",
-		"description": "Placeholder text before displaying rotations."
+		"description": "Text shown before displaying rotations"
 	},
 	
 	"error": {
 		"message": "Next rotations unavailable at the moment.",
-		"description": "Displayed when the JSON can't be retrieved"
+		"description": "Displayed when the data can't be retrieved"
 	},
 	
 	"unknown": {
 		"message": "Unknown Map",
-		"description": "Displayed when a stage is not recognized by the extension."
+		"description": "Displayed as a stage name when a stage is not recognized by the extension"
 	},
 	
 	"nextRotation": {
-		"message": "Next Rotation at ",
-		"description": "Displayed before a time element to indicate when is the next rotation"
+		"message": "Next Rotation at",
+		"description": "Displayed before each rotation to indicate when is the next one"
 	},
 	
 	"currentRotation": {
@@ -104,32 +104,32 @@
 
 	"fesTitle": {
 		"message": "Maps for this Splatfest",
-		"description": "Displayed before the maps thumbnails"
+		"description": "Displayed as a title before the maps thumbnails during Splatfest"
 	},
-	
+
 	"select": {
     	"message": "Select...",
-    	"description": "Displayed at first launch so the dropdown menus are not empty"
+    	"description": "Default option in the menus of the options page"
 	},
 	
 	"timeFormatLabel": {
 		"message": "Time Format",
-		"description": "Title in the option page for chosing the time format"
+		"description": "Title in the options page for chosing the time format"
 	},
 	
 	"12hoursLabel": {
 		"message": "12 hours",
-		"description": "Label in the option page for selecting the 12 hour format"
+		"description": "Label in the options page for selecting the 12 hour format"
 	},
 	
 	"24hoursLabel": {
 		"message": "24 hours",
-		"description": "Label in the option page for selecting the 24 hour format"
+		"description": "Label in the options page for selecting the 24 hour format"
 	},
 	
 	"regionLabel": {
 		"message": "Splatfest region",
-		"description": "Title in the option page for chosing the region of the user"
+		"description": "Title in the options page for chosing the region of the user"
 	},
 	
 	"regionJP": {
@@ -139,27 +139,27 @@
 	
 	"regionUS": {
 		"message": "North America",
-		"description": "Choice for United States in the region dropdown menu"
+		"description": "Choice for North America in the region dropdown option"
 	},
 	
 	"regionEU": {
 		"message": "Europe / Oceania",
-		"description": "Choice for Europe in the region dropdown menu"
+		"description": "Choice for Europe/Oceania in the region dropdown option"
 	},
 	
 	"mapsThumbnailsLabel": {
 		"message": "Map thumbnails",
-		"description": "Title in the option page for chosing the type of thumbnails"
+		"description": "Title in the options page for chosing if thumbnails are shown with or without ink"
 	},
 	
 	"mapsInked": {
 		"message": "With ink",
-		"description": "Load the maps thumbnails with ink in them"
+		"description": "Choice for loading the maps thumbnails with ink in them"
 	},
 	
 	"mapsNotInked": {
 		"message": "Without ink",
-		"description": "Load the maps thumbnails without ink in them"
+		"description": "Choice for loading the maps thumbnails without ink in them"
 	},
 	
 	"savedMessage": {
