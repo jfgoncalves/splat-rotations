@@ -25,9 +25,9 @@ function init() {
 
     if (region === 'jp') {
         url = "http://s3-ap-northeast-1.amazonaws.com/splatoon-data.nintendo.net/fes_info.json";
-    } /* else if (region === 'eu') {
-      url = "https://splatoon.ink/schedule_eu.json";
-    } */
+    } else if (region === 'eu') {
+      url = "http://nintendhome.fr/splat-rotations/fes_eu.json";
+    } 
     retrieveFes(url, region);
 }
 
@@ -49,7 +49,7 @@ function retrieveFes(url, fes_region) {
             if (json.fes_state === 1) {
                 parseFes(json, fes_region);
             } else {
-                if (fes_region === "jp") {
+                if (fes_region === "jp" || fes_region === 'eu') {
                     retrieveRotations();
                 } else {
                     parseRotations(json);
@@ -111,7 +111,7 @@ function parseFes(json, region) {
 
     // Region specific code executed here
 
-    if (region === 'jp') {
+    if (region === 'jp' || region === 'eu') {
 
         var festival, fesDiv, fesImage, fesMapName, fesStageName, fesMapContainer, stage;
 
