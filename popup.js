@@ -55,7 +55,8 @@ function retrieveFes(url, fes_region) {
                     parseRotations(json);
                 }
             }
-
+        } else if (AJAX_req.readyState == 3) {
+            document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
         } else {
             document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
         }
@@ -78,6 +79,8 @@ function retrieveRotations() {
 
             json = JSON.parse(AJAX_req.responseText);
             parseRotations(json);
+        } else if (AJAX_req.readyState == 3) {
+            document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
         } else {
             document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
         }
