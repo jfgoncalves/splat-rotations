@@ -74,3 +74,4 @@ function restore_options() {
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
+document.getElementsByTagName('html')[0].setAttribute('lang', chrome.i18n.getUILanguage().substring(0, 2));

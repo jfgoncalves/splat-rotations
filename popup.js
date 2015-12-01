@@ -328,9 +328,8 @@ function parseRotations(json) {
     }
 }
 
+document.getElementsByTagName('html')[0].setAttribute('lang', chrome.i18n.getUILanguage().substring(0, 2));
 document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
-
-
 window.addEventListener("load", function() {
     init();
 });
