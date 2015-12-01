@@ -75,3 +75,7 @@ function restore_options() {
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementsByTagName('html')[0].setAttribute('lang', chrome.i18n.getUILanguage().substring(0, 2));
+if (chrome.i18n.getUILanguage() === 'ja') {
+    document.getElementById('timeDiv').style.display = 'none';
+    document.body.style.height = '110px';
+}
