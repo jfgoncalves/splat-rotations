@@ -27,7 +27,6 @@
 	},
 
 	"permissions": [
-		"https://splatoon.ink/",
-		"storage"
+		"https://splatoon.ink/"
 	]
 }
