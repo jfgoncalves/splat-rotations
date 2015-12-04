@@ -137,7 +137,7 @@
 		"description": "Choice for Japan in the region dropdown option"
 	},
 
-	"regionUS": {
+	"regionNA": {
 		"message": "North America",
 		"description": "Choice for North America in the region dropdown option"
 	},
