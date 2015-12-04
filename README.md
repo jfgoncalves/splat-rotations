@@ -12,7 +12,6 @@ A Chrome extension fetching the current and upcoming Splatoon stages.
 ## How to install
 
 * Install from the [Chrome Web Store]() (auto-update)
-* You can also [download the zip](https://github.com/jfgoncalves/splat-rotations/zipball/master) of this repository and load it as an unpackaged extension in chrome://extensions (developer mode needs to be turned on) (does not auto-update)
 
 ## The extension is not translated in my language
 
@@ -27,8 +26,6 @@ The extension currently needs:
 * Official night pictures of:
 	* Arowana Mall
 	* Flounder Heights
-	* Mahi-Mahi Resort
-* Official day without ink pictures of:
 	* Mahi-Mahi Resort
 * US Splatfest support (will be added on December 5th)
 * [Full translations](https://poeditor.com/join/project/pwVRLVIrEt) in:
