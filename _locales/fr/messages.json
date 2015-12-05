@@ -18,6 +18,11 @@
 		"message": "Prochaine rotations indisponibles pour le moment.",
 		"description": "Displayed when the data can't be retrieved"
 	},
+	
+	"fesUnavailable": {
+    	"message": "Festival Américain en cours. Les rotations retourneront dès sa fin.",
+    	"description": "Displayed when people are viewing rotations during an US Splatfest"
+	},
 
 	"unknown": {
 		"message": "Map Inconnue",

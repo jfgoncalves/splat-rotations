@@ -46,11 +46,14 @@ function retrieveFes(url, fes_region) {
         if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
 
             json = JSON.parse(AJAX_req.responseText);
-            if (json.fes_state === 1) {
+
+            if (json.fes_state === 1 || json.splatfest === true) {
                 parseFes(json, fes_region);
+
             } else {
+
                 if (fes_region === "jp" || fes_region === 'eu') {
-                    retrieveRotations();
+                    retrieveRotations(fes_region);
                 } else {
                     parseRotations(json);
                 }
@@ -64,7 +67,7 @@ function retrieveFes(url, fes_region) {
     AJAX_req.send(null);
 }
 
-function retrieveRotations() {
+function retrieveRotations(region) {
 
     var AJAX_req, json;
 
@@ -78,7 +81,14 @@ function retrieveRotations() {
         if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
 
             json = JSON.parse(AJAX_req.responseText);
-            parseRotations(json);
+            
+            if (json.splatfest === true && region === 'eu' || region === 'jp' ) {
+                document.getElementById('load').innerHTML = chrome.i18n.getMessage("fesUnavailable");
+
+            } else {
+                parseRotations(json);
+            }
+
         } else if (AJAX_req.readyState == 3) {
             document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
         } else {
@@ -90,7 +100,7 @@ function retrieveRotations() {
 
 function parseFes(json, region) {
 
-    var fes_css, fesTitle, title;
+    var fes_css, fesTitle, title, festival, fesDiv, fesImage, fesMapName, fesStageName, fesMapContainer, stage;
 
     // DOM starting
     document.getElementById('day').id = "night";
@@ -115,8 +125,6 @@ function parseFes(json, region) {
     // Region specific code executed here
 
     if (region === 'jp' || region === 'eu') {
-
-        var festival, fesDiv, fesImage, fesMapName, fesStageName, fesMapContainer, stage;
 
         festival = json.fes_stages;
         fesMapContainer = document.createElement('div');
@@ -152,9 +160,37 @@ function parseFes(json, region) {
 
     } else {
 
-        //
-        // Handle US/EU Splatfest var here
-        //
+        festival = json.schedule[0].regular.maps;
+        fesMapContainer = document.createElement('div');
+
+        for (stage in festival) {
+
+            if (festival.hasOwnProperty(stage)) {
+                fesDiv = document.createElement('div');
+                fesDiv.className = "fesContainer";
+
+                fesStageName = jpNameParser(festival[stage].nameJP);
+
+                fesImage = document.createElement('img');
+                fesImage.className = "map";
+                fesImage.src = "assets/stages/night/"+fesStageName+".jpg";
+                fesDiv.appendChild(fesImage);
+
+                fesImage.onerror = function () {
+                    this.onerror = null;
+                    this.src = "assets/stages/notfoundfes.jpg";
+                };
+
+                fesMapName = document.createElement('div');
+                fesMapName.className = "name";
+                fesMapName.innerHTML = chrome.i18n.getMessage(fesStageName);
+                fesDiv.appendChild(fesMapName);
+
+                fesMapContainer.appendChild(fesDiv);
+            }
+        }
+
+        document.getElementById('rotations').appendChild(fesMapContainer);
 
     }
 }

@@ -24,10 +24,8 @@ Nice! Feel free to [create a new issue](https://github.com/jfgoncalves/splat-rot
 The extension currently needs:
 
 * Official night pictures of:
-	* Arowana Mall
 	* Flounder Heights
 	* Mahi-Mahi Resort
-* US Splatfest support (will be added on December 5th)
 * [Full translations](https://poeditor.com/join/project/pwVRLVIrEt) in:
 	* German
 	* Italian
