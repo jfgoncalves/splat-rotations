@@ -20,8 +20,8 @@
 	},
 	
 	"fesUnavailable": {
-    	"message": "Festival Américain en cours. Les rotations retourneront dès sa fin.",
-    	"description": "Displayed when people are viewing rotations during an US Splatfest"
+        "message": "Festival Américain en cours. Les rotations retourneront dès sa fin.",
+        "description": "Displayed when people are viewing rotations during an US Splatfest"
 	},
 
 	"unknown": {

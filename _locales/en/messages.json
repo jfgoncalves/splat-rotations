@@ -20,8 +20,8 @@
 	},
 	
 	"fesUnavailable": {
-    	"message": "US Splatfest ongoing. Rotations will return when it ends.",
-    	"description": "Displayed when people are viewing rotations during an US Splatfest"
+        "message": "US Splatfest ongoing. Rotations will return when it ends.",
+        "description": "Displayed when people are viewing rotations during an US Splatfest"
 	},
 
 	"unknown": {
