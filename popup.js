@@ -21,7 +21,7 @@ function init() {
     var region, url, warning;
     //Send the right URL to the program depending on the region set
     region = localStorage.getItem("region");
-    if (region === null || region === '') {
+    if (region == null) {
         url = 'https://splatapi.ovh/schedule_na.json';
         warning = document.getElementById("warning");
         warning.innerHTML = chrome.i18n.getMessage("noRegion");
