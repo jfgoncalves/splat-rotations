@@ -12,10 +12,10 @@ A Chrome extension fetching the current and upcoming Splatoon stages.
 ## How to install
 
 * **Chrome:**<br>
-  Install from the [Chrome Web Store]()
+  Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/splat-rotations/gafbbdopihfgddkhojbjfhdbckfkelka)
 
 * **Opera:**<br>
-  Download the [Download Chrome extension](https://addons.opera.com/fr/extensions/details/download-chrome-extension-9/?display=en) then download the extension from the [Chrome Web Store]()
+  Download the [Download Chrome extension](https://addons.opera.com/fr/extensions/details/download-chrome-extension-9/?display=en) then download the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/splat-rotations/gafbbdopihfgddkhojbjfhdbckfkelka)
 * **Firefox:**<br>
   No support for Firefox yet, but it's [probably going to happen](https://blog.mozilla.org/addons/2015/08/21/the-future-of-developing-firefox-add-ons/) in the near future.
 * **Safari:**<br>
