@@ -19,9 +19,9 @@
 		"description": "Displayed when the data can't be retrieved"
 	},
 	
-	"fesUnavailable": {
-        "message": "US Splatfest ongoing. Rotations will return when it ends.",
-        "description": "Displayed when people are viewing rotations during an US Splatfest"
+	"noRegion": {
+    	"message": "Please set your region in the extension's settings.",
+    	"description": "Displayed when the user has no region set"
 	},
 
 	"unknown": {
@@ -105,11 +105,6 @@
 
 	"mahi": {
 		"message": "Mahi-Mahi Resort"
-	},
-
-	"fesTitle": {
-		"message": "Maps for this Splatfest",
-		"description": "Displayed as a title before the maps thumbnails during Splatfest"
 	},
 
 	"select": {

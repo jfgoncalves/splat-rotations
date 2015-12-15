@@ -19,9 +19,9 @@
 		"description": "Displayed when the data can't be retrieved"
 	},
 	
-	"fesUnavailable": {
-        "message": "Festival Américain en cours. Les rotations retourneront dès sa fin.",
-        "description": "Displayed when people are viewing rotations during an US Splatfest"
+	"noRegion": {
+    	"message": "Merci de sélectionner une région dans les paramètres de l'extension.",
+    	"description": "Displayed when the user has no region set"
 	},
 
 	"unknown": {
@@ -105,11 +105,6 @@
 
 	"mahi": {
 		"message": "Club Ca$$halot"
-	},
-
-	"fesTitle": {
-		"message": "Maps pour ce Festival",
-		"description": "Displayed as a title before the maps thumbnails during Splatfest"
 	},
 
 	"select": {

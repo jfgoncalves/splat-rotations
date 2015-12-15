@@ -55,7 +55,7 @@ body {
 	color: #fff;
 	font-size: 2em;
 	font-family: 'Project Paintball';
-	margin-top: 15px !important;
+	margin-top: 20px !important;
 }
 
 .map {
@@ -67,4 +67,22 @@ body {
 .name {
 	color: #fff;
 	font-size: 1.5em;
+}
+
+.teams {
+    margin-top: 10px !important;
+}
+
+.team {
+    color: #fff;
+	font-size: 1.7em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.vs {
+    color: #fff;
+	font-size: 2.5em;
+	font-family: 'Project Paintball';
+	text-align: center;
 }

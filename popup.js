@@ -18,21 +18,21 @@
 
 function init() {
 
-    var region, url;
+    var region, url, warning;
     //Send the right URL to the program depending on the region set
     region = localStorage.getItem("region");
-    url = "https://splatoon.ink/schedule.json";
-
-    if (region === 'jp') {
-        url = "http://s3-ap-northeast-1.amazonaws.com/splatoon-data.nintendo.net/fes_info.json";
-    } else if (region === 'eu') {
-      url = "http://nintendhome.fr/splat-rotations/fes_eu.json";
-    } 
-    retrieveFes(url, region);
+    if (region === null || region === '') {
+        url = 'https://splatapi.ovh/schedule_na.json';
+        warning = document.getElementById("warning");
+        warning.innerHTML = chrome.i18n.getMessage("noRegion");
+        warning.setAttribute("style", "background-color: #FFFF97; text-align: center; height: 30px; line-height: 30px;");
+    } else {
+        url = 'https://splatapi.ovh/schedule_'+region+'.json';
+    }
+    retrieveJSON(url, region);
 }
 
-
-function retrieveFes(url, fes_region) {
+function retrieveJSON(url, fes_region) {
 
     var AJAX_req, json;
     // URL specific on region
@@ -47,48 +47,12 @@ function retrieveFes(url, fes_region) {
 
             json = JSON.parse(AJAX_req.responseText);
 
-            if (json.fes_state === 1 || json.splatfest === true) {
-                parseFes(json, fes_region);
-
-            } else {
-
-                if (fes_region === "jp" || fes_region === 'eu') {
-                    retrieveRotations(fes_region);
-                } else {
-                    parseRotations(json);
-                }
-            }
-        } else if (AJAX_req.readyState == 3) {
-            document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
-        } else {
-            document.getElementById('load').innerHTML = chrome.i18n.getMessage("error");
-        }
-    };
-    AJAX_req.send(null);
-}
-
-function retrieveRotations(region) {
-
-    var AJAX_req, json;
-
-    AJAX_req = new XMLHttpRequest();
-    AJAX_req.open("GET", 'https://splatoon.ink/schedule.json', true);
-    AJAX_req.setRequestHeader("Content-type", "application/json");
-    AJAX_req.setRequestHeader("Cache-Control", "no-cache");
-
-    AJAX_req.onreadystatechange = function() {
-
-        if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
-
-            json = JSON.parse(AJAX_req.responseText);
-            
-            if (json.splatfest === true && region === 'eu' || region === 'jp' ) {
-                document.getElementById('load').innerHTML = chrome.i18n.getMessage("fesUnavailable");
+            if (json.festival === true) {
+                parseFes(json);
 
             } else {
                 parseRotations(json);
             }
-
         } else if (AJAX_req.readyState == 3) {
             document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
         } else {
@@ -98,104 +62,7 @@ function retrieveRotations(region) {
     AJAX_req.send(null);
 }
 
-function parseFes(json, region) {
-
-    var fes_css, fesTitle, title, festival, fesDiv, fesImage, fesMapName, fesStageName, fesMapContainer, stage;
-
-    // DOM starting
-    document.getElementById('day').id = "night";
-    document.getElementById('rotations').innerHTML = "";
-
-    fes_css = document.createElement('link');
-    fes_css.rel = "stylesheet";
-    fes_css.href = "popup_night.css";
-    document.getElementsByTagName('head')[0].appendChild(fes_css);
-
-
-    fesTitle = document.createElement('img');
-    fesTitle.className = "fesTitle";
-    fesTitle.src = "assets/fes.png";
-    document.getElementById('rotations').appendChild(fesTitle);
-
-    title = document.createElement('div');
-    title.className = "title";
-    title.innerHTML = chrome.i18n.getMessage("fesTitle");
-    document.getElementById('rotations').appendChild(title);
-
-    // Region specific code executed here
-
-    if (region === 'jp' || region === 'eu') {
-
-        festival = json.fes_stages;
-        fesMapContainer = document.createElement('div');
-
-        for (stage in festival) {
-
-            if (festival.hasOwnProperty(stage)) {
-                fesDiv = document.createElement('div');
-                fesDiv.className = "fesContainer";
-
-                fesStageName = jpNameParser(festival[stage].name);
-
-                fesImage = document.createElement('img');
-                fesImage.className = "map";
-                fesImage.src = "assets/stages/night/"+fesStageName+".jpg";
-                fesDiv.appendChild(fesImage);
-
-                fesImage.onerror = function () {
-                    this.onerror = null;
-                    this.src = "assets/stages/notfoundfes.jpg";
-                };
-
-                fesMapName = document.createElement('div');
-                fesMapName.className = "name";
-                fesMapName.innerHTML = chrome.i18n.getMessage(fesStageName);
-                fesDiv.appendChild(fesMapName);
-
-                fesMapContainer.appendChild(fesDiv);
-            }
-        }
-
-        document.getElementById('rotations').appendChild(fesMapContainer);
-
-    } else {
-
-        festival = json.schedule[0].regular.maps;
-        fesMapContainer = document.createElement('div');
-
-        for (stage in festival) {
-
-            if (festival.hasOwnProperty(stage)) {
-                fesDiv = document.createElement('div');
-                fesDiv.className = "fesContainer";
-
-                fesStageName = jpNameParser(festival[stage].nameJP);
-
-                fesImage = document.createElement('img');
-                fesImage.className = "map";
-                fesImage.src = "assets/stages/night/"+fesStageName+".jpg";
-                fesDiv.appendChild(fesImage);
-
-                fesImage.onerror = function () {
-                    this.onerror = null;
-                    this.src = "assets/stages/notfoundfes.jpg";
-                };
-
-                fesMapName = document.createElement('div');
-                fesMapName.className = "name";
-                fesMapName.innerHTML = chrome.i18n.getMessage(fesStageName);
-                fesDiv.appendChild(fesMapName);
-
-                fesMapContainer.appendChild(fesDiv);
-            }
-        }
-
-        document.getElementById('rotations').appendChild(fesMapContainer);
-
-    }
-}
-
-// This function parse the name of the stages and returns the correct localized name that can be used to parse images and strings.
+// Parse the name of the stages and returns the correct localized name that can be used to parse images and strings.
 
 function jpNameParser(name) {
     var jp_dic = {
@@ -220,6 +87,67 @@ function jpNameParser(name) {
     return jp_dic[name];
 }
 
+// Handle Splatfest
+
+function parseFes(json) {
+
+    var fes_css, fesTitle, title, festival, fesDiv, fesImage, fesMapName, fesStageName, fesMapContainer, stage;
+
+    // DOM starting
+    document.getElementById('day').id = "night";
+    document.getElementById('rotations').innerHTML = "";
+
+    fes_css = document.createElement('link');
+    fes_css.rel = "stylesheet";
+    fes_css.href = "popup_night.css";
+    document.getElementsByTagName('head')[0].appendChild(fes_css);
+
+
+    fesTitle = document.createElement('img');
+    fesTitle.className = "fesTitle";
+    fesTitle.src = "assets/fes.png";
+    document.getElementById('rotations').appendChild(fesTitle);
+    
+    vs = document.createElement('div');
+    vs.className = "teams";
+    vs.innerHTML = '<span class="team">'+json.schedule[0].team_alpha_name+'</span><span class="vs"> vs </span><span class="team">'+json.schedule[0].team_bravo_name+'</span';
+    // Teams color
+    document.getElementById('rotations').appendChild(vs);
+
+    // Parsing
+
+    festival = json.schedule[0].stages;
+    fesMapContainer = document.createElement('div');
+
+    for (stage in festival) {
+
+        if (festival.hasOwnProperty(stage)) {
+            fesDiv = document.createElement('div');
+            fesDiv.className = "fesContainer";
+
+            fesStageName = jpNameParser(festival[stage].name);
+
+            fesImage = document.createElement('img');
+            fesImage.className = "map";
+            fesImage.src = "assets/stages/night/"+fesStageName+".jpg";
+            fesDiv.appendChild(fesImage);
+
+            fesImage.onerror = function () {
+                this.onerror = null;
+                this.src = "assets/stages/notfoundfes.jpg";
+            };
+
+            fesMapName = document.createElement('div');
+            fesMapName.className = "name";
+            fesMapName.innerHTML = chrome.i18n.getMessage(fesStageName);
+            fesDiv.appendChild(fesMapName);
+
+            fesMapContainer.appendChild(fesDiv);
+        }
+    }
+    document.getElementById('rotations').appendChild(fesMapContainer);
+}
+
 function parseRotations(json) {
 
     var schedule, rotation, startTime, nextRotation, regular, ranked, rankedMode, eachRotation, timeRotation, divRegular, h1Regular, divRanked, h1Ranked, divRankedMode, map, mapName, mapRegular, mapRegularImage, mapRegularText, mapRanked, mapRankedImage, mapRankedText, separator;
@@ -231,11 +159,11 @@ function parseRotations(json) {
     for (rotation in schedule) {
 
         if (schedule.hasOwnProperty(rotation)) {
-            startTime = new Date(schedule[rotation].startTime);
+            startTime = new Date(schedule[rotation].begin);
 
-            regular = schedule[rotation].regular.maps;
-            ranked = schedule[rotation].ranked.maps;
-            rankedMode = schedule[rotation].ranked.rulesJP;
+            regular = schedule[rotation].stages.regular;
+            ranked = schedule[rotation].stages.ranked;
+            rankedMode = schedule[rotation].ranked_mode;
 
             if (Number([rotation]) === 0) {
                 nextRotation = chrome.i18n.getMessage("currentRotation");
@@ -281,7 +209,7 @@ function parseRotations(json) {
             for (map in regular) {
 
                 if (regular.hasOwnProperty(map)) {
-                    mapName = regular[map].nameJP;
+                    mapName = regular[map].name;
                     mapRegular = document.createElement('div');
                     mapRegular.className = "map"+[map];
 
@@ -321,7 +249,7 @@ function parseRotations(json) {
             for (map in ranked) {
 
                 if (ranked.hasOwnProperty(map)) {
-                    mapName = ranked[map].nameJP;
+                    mapName = ranked[map].name;
                     mapRanked = document.createElement('div');
                     mapRanked.className = "map"+[map];
 
