@@ -22,12 +22,12 @@ function init() {
     //Send the right URL to the program depending on the region set
     region = localStorage.getItem("region");
     if (region == null) {
-        url = 'https://splatapi.ovh/schedule_na.json';
+        url = 'http://splatapi.ovh/schedule_na.json';
         warning = document.getElementById("warning");
         warning.innerHTML = chrome.i18n.getMessage("noRegion");
         warning.setAttribute("style", "background-color: #FFFF97; text-align: center; height: 30px; line-height: 30px;");
     } else {
-        url = 'https://splatapi.ovh/schedule_'+region+'.json';
+        url = 'http://splatapi.ovh/schedule_'+region+'.json';
     }
     retrieveJSON(url, region);
 }
@@ -150,9 +150,10 @@ function parseFes(json) {
 
 function parseRotations(json) {
 
-    var schedule, rotation, startTime, nextRotation, regular, ranked, rankedMode, eachRotation, timeRotation, divRegular, h1Regular, divRanked, h1Ranked, divRankedMode, map, mapName, mapRegular, mapRegularImage, mapRegularText, mapRanked, mapRankedImage, mapRankedText, separator;
+    var schedule, offset, rotation, startTime, nextRotation, regular, ranked, rankedMode, eachRotation, timeRotation, divRegular, h1Regular, divRanked, h1Ranked, divRankedMode, map, mapName, mapRegular, mapRegularImage, mapRegularText, mapRanked, mapRankedImage, mapRankedText, separator;
 
     schedule = json.schedule;
+    offset = Number(localStorage.getItem("offset"));
 
     document.getElementById('rotations').innerHTML = "";
 
@@ -160,6 +161,7 @@ function parseRotations(json) {
 
         if (schedule.hasOwnProperty(rotation)) {
             startTime = new Date(schedule[rotation].begin);
+            startTime.setHours(startTime.getHours()+offset);
 
             regular = schedule[rotation].stages.regular;
             ranked = schedule[rotation].stages.ranked;

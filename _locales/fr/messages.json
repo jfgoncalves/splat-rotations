@@ -162,6 +162,16 @@
 		"description": "Choice for loading the maps thumbnails without ink in them"
 	},
 
+	"offsetLabel": {
+		"message": "Corriger l'heure (en heures) :",
+		"description": "Title in the options page for setting offset hours"
+	},
+
+    "offsetWarning": {
+		"message": "Attention: Changez la valeur uniquement si les heures des rotations sont erronés.",
+		"description": "Warning displayed on the offset option"
+	},
+
 	"savedMessage": {
 		"message": "Sauvegardé.",
 		"description": "Text displayed when an option is successfully changed or set"

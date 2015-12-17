@@ -31,16 +31,18 @@ document.getElementById('regionEU').innerHTML = chrome.i18n.getMessage("regionEU
 document.getElementById('mapsThumbnailsLabel').innerHTML = chrome.i18n.getMessage("mapsThumbnailsLabel");
 document.getElementById('mapsInked').innerHTML = chrome.i18n.getMessage("mapsInked");
 document.getElementById('mapsNotInked').innerHTML = chrome.i18n.getMessage("mapsNotInked");
-
+document.getElementById('offsetLabel').innerHTML = chrome.i18n.getMessage("offsetLabel");
+document.getElementById('warning').innerHTML = chrome.i18n.getMessage("offsetWarning");
 }
 
 localize_options();
 
-var timeValue, regionValue, inkedValue, time, region, setInk;
+var timeValue, regionValue, inkedValue, offsetValue, time, region, setInk;
 
 timeValue = document.getElementById('timeFormat');
 regionValue = document.getElementById('region');
 inkedValue = document.getElementById('setInk');
+offsetValue = document.getElementById('offset');
 
 function saved_status() {
 	document.getElementById("saved").innerHTML = '<div class="saved-inner animated fadeIn">'+chrome.i18n.getMessage("savedMessage")+'</div>';
@@ -65,12 +67,23 @@ inkedValue.addEventListener('change', function() {
 	saved_status();
 });
 
+offsetValue.addEventListener('input', function() {
+    setOffset = offsetValue.value;
+    localStorage.setItem("offset", setOffset);
+    saved_status();
+});
+
+
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
-    document.getElementById('timeFormat').value = localStorage.getItem("timeFormat");
-    document.getElementById('region').value = localStorage.getItem("region");
-    document.getElementById('setInk').value = localStorage.getItem("setInk");
+    timeValue.value = localStorage.getItem("timeFormat");
+    regionValue.value = localStorage.getItem("region");
+    inkedValue.value = localStorage.getItem("setInk");
+    if (localStorage.getItem("offset") === null) {
+        localStorage.setItem("offset", 0);
+    }
+    offsetValue.value = localStorage.getItem("offset");
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);

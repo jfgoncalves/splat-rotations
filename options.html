@@ -23,7 +23,7 @@
 	<title>Splat Rotations Options</title>
 	<style>
 	body {
-		height: 150px;
+		height: auto;
 	}
 	.saved-inner {
 		background-color: #FFFF97;
@@ -31,7 +31,7 @@
 		font-weight: bolder;
 		padding: 5px;
 		text-align: center;
-		margin: 20px auto 0 auto;
+		margin: 20px auto 20px; auto;
 		width: 100px;
 		border-radius: 3px;
 	}
@@ -40,6 +40,21 @@
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
+    }
+    
+    input[type=number]::-webkit-inner-spin-button {
+        opacity: 1;
+    }
+    
+    #warning {
+        font-style: italic;
+        font-weight: bold;
+    }
+    
+    #warning::before {
+        content: url('assets/warning.png');
+        padding-right: 5px;
+        vertical-align: -20%;
     }
     
     @-webkit-keyframes fadeIn {
@@ -98,6 +113,14 @@
     		<option id="mapsNotInked" value="notInked"></option>
     	</select>
     	<br>
+    	<br>
+    </div>
+    <hr>
+    <div id="offsetDiv">
+        <span id="warning"></span>
+        <br>
+        <span id="offsetLabel"></span>
+        <input type="number" id="offset" name="offset" min="-12" max="12">
     </div>
 	<div id="saved"></div>
 	<script src="options.js"></script>
