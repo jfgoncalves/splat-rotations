@@ -18,16 +18,20 @@
 
 function init() {
 
-    var region, url, warning;
+    var region, offset, url, warning;
     //Send the right URL to the program depending on the region set
     region = localStorage.getItem("region");
-    if (region == null) {
+    offset = localStorage.getItem("offset");
+    if (region === null) {
         url = 'http://splatapi.ovh/schedule_na.json';
         warning = document.getElementById("warning");
         warning.innerHTML = chrome.i18n.getMessage("noRegion");
         warning.setAttribute("style", "background-color: #FFFF97; text-align: center; height: 30px; line-height: 30px;");
     } else {
         url = 'http://splatapi.ovh/schedule_'+region+'.json';
+    }
+    if (offset === null) {
+        localStorage.setItem("offset", 0);
     }
     retrieveJSON(url, region);
 }
