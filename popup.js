@@ -66,6 +66,7 @@ function retrieveJSON(url, fes_region) {
 
 function jpNameParser(name) {
     var jp_dic = {
+        "アンチョビットゲームズ": "ancho",
         "アロワナモール": "arowana",
         "Ｂバスパーク": "blackbelly",
         "ネギトロ炭鉱": "bluefin",
@@ -73,13 +74,14 @@ function jpNameParser(name) {
         "ヒラメが丘団地": "flounder",
         "マサバ海峡大橋": "hammerhead",
         "モズク農園": "kelp",
+        "マヒマヒリゾート＆スパ": "mahi",
         "タチウオパーキング": "moray",
         "キンメダイ美術館": "museum",
+        "ショッツル鉱山": "piranha",
         "ホッケふ頭": "port",
         "シオノメ油田": "saltspray",
         "デカライン高架下": "urchin",
         "ハコフグ倉庫": "walleye",
-        "マヒマヒリゾート＆スパ": "mahi",
         "ガチエリア": "splat",
         "ガチホコ": "rainmaker",
         "ガチヤグラ": "tower"

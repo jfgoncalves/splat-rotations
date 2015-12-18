@@ -107,8 +107,13 @@
         "message": "Mahi-Mahi Resort"
     },
 
-	},
+	"ancho": {
+        "message": "Ancho-V Games"
+    },
 
+    "piranha": {
+        "message": "Piranha Pit"
+    },
 
     "select": {
         "message": "Select...",
