@@ -1,113 +1,113 @@
 {
-	"appName": {
-		"message": "Splat Rotations",
-		"description": "The title of the application, displayed in the web store and in Chrome"
-	},
+    "appName": {
+        "message": "Splat Rotations",
+        "description": "The title of the application, displayed in the web store and in Chrome"
+    },
 
-	"appDesc": {
-		"message": "Display the current and upcoming Splatoon rotations.",
-		"description": "The description of the application, displayed in the web store and in Chrome"
-	},
+    "appDesc": {
+        "message": "Display the current and upcoming Splatoon rotations.",
+        "description": "The description of the application, displayed in the web store and in Chrome"
+    },
 
-	"loading": {
-		"message": "Loading...",
-		"description": "Text shown before displaying rotations"
-	},
+    "loading": {
+        "message": "Loading...",
+        "description": "Text shown before displaying rotations"
+    },
 
-	"error": {
-		"message": "Next rotations unavailable at the moment.",
-		"description": "Displayed when the data can't be retrieved"
-	},
-	
+    "error": {
+        "message": "Next rotations unavailable at the moment.",
+        "description": "Displayed when the data can't be retrieved"
+    },
+
     "noRegion": {
         "message": "Please set your region in the extension's settings.",
         "description": "Displayed when the user has no region set"
     },
 
-	"unknown": {
-		"message": "Unknown Map",
-		"description": "Displayed as a stage name when a stage is not recognized by the extension"
-	},
+    "unknown": {
+        "message": "Unknown Map",
+        "description": "Displayed as a stage name when a stage is not recognized by the extension"
+    },
 
-	"nextRotation": {
-		"message": "Next Rotation at",
-		"description": "Displayed before each rotation to indicate when is the next one"
-	},
+    "nextRotation": {
+        "message": "Next Rotation at",
+        "description": "Displayed before each rotation to indicate when is the next one"
+    },
 
-	"currentRotation": {
-		"message": "Now",
-		"description": "Displayed as the title of the current rotation"
-	},
+    "currentRotation": {
+        "message": "Now",
+        "description": "Displayed as the title of the current rotation"
+    },
 
-	"splat": {
-		"message": "Splat Zones"
-	},
+    "splat": {
+        "message": "Splat Zones"
+    },
 
-	"tower": {
-		"message": "Tower Control"
-	},
+    "tower": {
+        "message": "Tower Control"
+    },
 
-	"rainmaker": {
-		"message": "Rainmaker"
-	},
+    "rainmaker": {
+        "message": "Rainmaker"
+    },
 
-	"arowana": {
-		"message": "Arowana Mall"
-	},
+    "arowana": {
+        "message": "Arowana Mall"
+    },
 
-	"blackbelly": {
-		"message": "Blackbelly Skatepark"
-	},
+    "blackbelly": {
+        "message": "Blackbelly Skatepark"
+    },
 
-	"bluefin": {
-		"message": "Bluefin Depot"
-	},
+    "bluefin": {
+        "message": "Bluefin Depot"
+    },
 
-	"camp": {
-		"message": "Camp Triggerfish"
-	},
+    "camp": {
+        "message": "Camp Triggerfish"
+    },
 
-	"flounder": {
-		"message": "Flounder Heights"
-	},
+    "flounder": {
+        "message": "Flounder Heights"
+    },
 
-	"hammerhead": {
-		"message": "Hammerhead Bridge"
-	},
+    "hammerhead": {
+        "message": "Hammerhead Bridge"
+    },
 
-	"kelp": {
-		"message": "Kelp Dome"
-	},
+    "kelp": {
+        "message": "Kelp Dome"
+    },
 
-	"moray": {
-		"message": "Moray Towers"
-	},
+    "moray": {
+        "message": "Moray Towers"
+    },
 
-	"port": {
-		"message": "Port Mackerel"
-	},
+    "port": {
+        "message": "Port Mackerel"
+    },
 
-	"saltspray": {
-		"message": "Saltspray Rig"
-	},
+    "saltspray": {
+        "message": "Saltspray Rig"
+    },
 
-	"urchin": {
-		"message": "Urchin Underpass"
-	},
+    "urchin": {
+        "message": "Urchin Underpass"
+    },
 
-	"walleye": {
-		"message": "Walleye Warehouse"
-	},
+    "walleye": {
+        "message": "Walleye Warehouse"
+    },
 
-	"museum": {
-		"message": "Museum d'Alfonsino"
-	},
+    "museum": {
+        "message": "Museum d'Alfonsino"
+    },
 
     "mahi": {
         "message": "Mahi-Mahi Resort"
     },
 
-	"ancho": {
+    "ancho": {
         "message": "Ancho-V Games"
     },
 
@@ -120,68 +120,68 @@
         "description": "Default option in the menus of the options page"
     },
 
-	"timeFormatLabel": {
-		"message": "Time format:",
-		"description": "Title in the options page for chosing the time format"
-	},
+    "timeFormatLabel": {
+        "message": "Time format:",
+        "description": "Title in the options page for chosing the time format"
+    },
 
-	"12hoursLabel": {
-		"message": "12 hours",
-		"description": "Label in the options page for selecting the 12 hour format"
-	},
+    "12hoursLabel": {
+        "message": "12 hours",
+        "description": "Label in the options page for selecting the 12 hour format"
+    },
 
-	"24hoursLabel": {
-		"message": "24 hours",
-		"description": "Label in the options page for selecting the 24 hour format"
-	},
+    "24hoursLabel": {
+        "message": "24 hours",
+        "description": "Label in the options page for selecting the 24 hour format"
+    },
 
-	"regionLabel": {
-		"message": "Splatfest region:",
-		"description": "Title in the options page for chosing the region of the user"
-	},
+    "regionLabel": {
+        "message": "Splatfest region:",
+        "description": "Title in the options page for chosing the region of the user"
+    },
 
-	"regionJP": {
-		"message": "Japan",
-		"description": "Choice for Japan in the region dropdown option"
-	},
+    "regionJP": {
+        "message": "Japan",
+        "description": "Choice for Japan in the region dropdown option"
+    },
 
-	"regionNA": {
-		"message": "North America",
-		"description": "Choice for North America in the region dropdown option"
-	},
+    "regionNA": {
+        "message": "North America",
+        "description": "Choice for North America in the region dropdown option"
+    },
 
-	"regionEU": {
-		"message": "Europe/Oceania",
-		"description": "Choice for Europe/Oceania in the region dropdown option"
-	},
+    "regionEU": {
+        "message": "Europe/Oceania",
+        "description": "Choice for Europe/Oceania in the region dropdown option"
+    },
 
-	"mapsThumbnailsLabel": {
-		"message": "Map thumbnails:",
-		"description": "Title in the options page for chosing if thumbnails are shown with or without ink"
-	},
+    "mapsThumbnailsLabel": {
+        "message": "Map thumbnails:",
+        "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
+    },
 
-	"mapsInked": {
-		"message": "With ink",
-		"description": "Choice for loading the maps thumbnails with ink in them"
-	},
+    "mapsInked": {
+        "message": "With ink",
+        "description": "Choice for loading the maps thumbnails with ink in them"
+    },
 
-	"mapsNotInked": {
-		"message": "Without ink",
-		"description": "Choice for loading the maps thumbnails without ink in them"
-	},
+    "mapsNotInked": {
+        "message": "Without ink",
+        "description": "Choice for loading the maps thumbnails without ink in them"
+    },
 
-	"offsetLabel": {
-		"message": "Offset (in hours):",
-		"description": "Title in the options page for setting offset hours"
-	},
+    "offsetLabel": {
+        "message": "Offset (in hours):",
+        "description": "Title in the options page for setting offset hours"
+    },
 
     "offsetWarning": {
         "message": "Warning: Only change this if the rotation times are not accurate.",
         "description": "Warning displayed on the offset option"
     },
 
-	"savedMessage": {
-		"message": "Saved.",
-		"description": "Text displayed when an option is successfully changed or set"
-	}
+    "savedMessage": {
+        "message": "Saved.",
+        "description": "Text displayed when an option is successfully changed or set"
+    }
 }
