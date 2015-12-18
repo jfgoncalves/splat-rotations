@@ -155,10 +155,11 @@ function parseFes(json) {
 
 function parseRotations(json) {
 
-    var schedule, offset, rotation, startTime, nextRotation, regular, ranked, rankedMode, eachRotation, timeRotation, divRegular, h1Regular, divRanked, h1Ranked, divRankedMode, map, mapName, mapRegular, mapRegularImage, mapRegularText, mapRanked, mapRankedImage, mapRankedText, separator;
+    var schedule, offset, currentLang, rotation, startTime, nextRotation, regular, ranked, rankedMode, eachRotation, timeRotation, divRegular, h1Regular, divRanked, h1Ranked, divRankedMode, map, mapName, mapRegular, mapRegularImage, mapRegularText, mapRanked, mapRankedImage, mapRankedText, separator;
 
     schedule = json.schedule;
     offset = Number(localStorage.getItem("offset"));
+    currentLang = chrome.i18n.getUILanguage();
 
     document.getElementById('rotations').innerHTML = "";
 
@@ -175,7 +176,7 @@ function parseRotations(json) {
             if (Number([rotation]) === 0) {
                 nextRotation = chrome.i18n.getMessage("currentRotation");
 
-            } else if(chrome.i18n.getUILanguage() === 'ja') {
+            } else if (currentLang === 'ja' || currentLang === 'de') {
                 nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('ja-JA').replace(':00:00', ':00');
             } else if (localStorage.getItem("timeFormat") === '12') {
                 nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('en-US').replace(':00 ', ' ');
