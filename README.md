@@ -1,6 +1,6 @@
 # Splat Rotations
 
-A Chrome extension fetching the current and upcoming Splatoon stages.
+A Chrome extension fetching the current and upcoming Splatoon stages. Powered by [Splat-API](https://github.com/jfgoncalves/Splat-API).
 
 <table align="center">
 	<tr>
@@ -15,12 +15,13 @@ A Chrome extension fetching the current and upcoming Splatoon stages.
   Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/splat-rotations/gafbbdopihfgddkhojbjfhdbckfkelka)
 
 * **Opera:**<br>
-  Download the [Download Chrome extension](https://addons.opera.com/fr/extensions/details/download-chrome-extension-9/?display=en) then download the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/splat-rotations/gafbbdopihfgddkhojbjfhdbckfkelka)
+  Download the [Download Chrome extension](https://addons.opera.com/fr/extensions/details/download-chrome-extension-9/?display=en) then download the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/splat-rotations/gafbbdopihfgddkhojbjfhdbckfkelka).
+  It does not update itself so make sure to check manually every once and a while.
 * **Firefox:**<br>
   No support for Firefox yet, but it's [probably going to happen](https://blog.mozilla.org/addons/2015/08/21/the-future-of-developing-firefox-add-ons/) in the near future.
 * **Safari:**<br>
   In June 2015, Apple announced the merging of their developer plans. [Developing for Safari was free before](http://gizmodo.com/apples-great-new-developer-program-screws-over-safari-d-1710539882), but as of now it cost 99$/y. Splat Rotations was initially planned for Safari, but I will not pay that much money to develop a free browser extension. **So, no support for Safari is planned.** If you are a developer with access to the Apple Developer Program, you can fork my project and port the code.
-  
+
 ## The extension is not translated in my language
 
 English and French are fully supported. You can also help [translate the extension](https://poeditor.com/join/project/pwVRLVIrEt) in your language.
