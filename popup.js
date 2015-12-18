@@ -104,12 +104,11 @@ function parseFes(json) {
     fes_css.href = "popup_night.css";
     document.getElementsByTagName('head')[0].appendChild(fes_css);
 
-
     fesTitle = document.createElement('img');
     fesTitle.className = "fesTitle";
     fesTitle.src = "assets/fes.png";
     document.getElementById('rotations').appendChild(fesTitle);
-    
+
     vs = document.createElement('div');
     vs.className = "teams";
     vs.innerHTML = '<span class="team">'+json.schedule[0].team_alpha_name+'</span><span class="vs"> vs </span><span class="team">'+json.schedule[0].team_bravo_name+'</span';

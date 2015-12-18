@@ -22,127 +22,127 @@
 }
 
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	width: 400px;
-	height: 100%;
+    width: 400px;
+    height: 100%;
 }
 
 #day {
-	background: url('assets/bg-light.jpg');
+    background: url('assets/bg-light.jpg');
 }
 
 #refresh {
-	text-align: right;
-	padding: 4px 4px 0 4px;
-	clear: both;
-	cursor: inherit;
+    text-align: right;
+    padding: 4px 4px 0 4px;
+    clear: both;
+    cursor: inherit;
 }
 
 #rotations {
-	padding: 0 4px 0 4px;
+    padding: 0 4px 0 4px;
 }
 
 #rotations > div {
-	margin: 30px auto 30px auto;
+    margin: 30px auto 30px auto;
 }
 
 #rotations > div:first-child {
-	margin: 15px auto 30px auto;
+    margin: 15px auto 30px auto;
 }
 
 div.time.rotation0 {
-	margin: 0 auto 10px auto;
+    margin: 0 auto 10px auto;
 }
 
 .time {
-	margin: 20px auto 0 auto;
-	color: #0393de;
-	font-size: 2em;
-	font-family: 'Project Paintball';
+    margin: 20px auto 0 auto;
+    color: #0393de;
+    font-size: 2em;
+    font-family: 'Project Paintball';
 }
 
 .regular, .ranked {
-	margin: 20px auto 30px auto;
+    margin: 20px auto 30px auto;
 }
 
 .map {
-	width: 194px;
-	height: 109px;
-	border-radius: 2px;
+    width: 194px;
+    height: 109px;
+    border-radius: 2px;
 }
 
 .map0 {
-	margin-right: 4px;
+    margin-right: 4px;
 }
 
 .map0, .map1 {
-	display: inline-block;
+    display: inline-block;
 }
 
 h1, .name, .mode, .time {
-	text-align: center;
+    text-align: center;
 }
 
 h1 {
-	font-family: 'Project Paintball';
-	margin-bottom: 10px;
+    font-family: 'Project Paintball';
+    margin-bottom: 10px;
 }
 
 .name {
-	font-size: 1.3em;
-	font-weight: bold;
-	margin-top: 3px;
-	color: #2F3335;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 3px;
+    color: #2F3335;
 }
 
 .mode {
-	font-size: 1.5em;
-	font-weight: bold;
-	margin-bottom: 8px;
-	margin-top: -10px;
-	color: #2F3335;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: -10px;
+    color: #2F3335;
 }
 
 .imgMode {
-	display: block;
-	margin: 0 auto 10px auto;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 .splat::before {
-	content: url('assets/modes/splat.png');
-	padding-right: 6px;
-	vertical-align: -25%;
+    content: url('assets/modes/splat.png');
+    padding-right: 6px;
+    vertical-align: -25%;
 }
 
 .tower::before {
-	content: url('assets/modes/tower.png');
-	padding-right: 6px;
-	vertical-align: -25%;
+    content: url('assets/modes/tower.png');
+    padding-right: 6px;
+    vertical-align: -25%;
 }
 
 .rainmaker::before {
-	content: url('assets/modes/rainmaker.png');
-	padding-right: 6px;
-	vertical-align: -25%;
+    content: url('assets/modes/rainmaker.png');
+    padding-right: 6px;
+    vertical-align: -25%;
 }
 
 hr {
-	width: 360px;
-	margin: auto;
-	border: 1px solid #2F3335;
-	opacity: 0.8;
+    width: 360px;
+    margin: auto;
+    border: 1px solid #2F3335;
+    opacity: 0.8;
 }
 
 #rotations > div:last-child hr {
-	display: none;
+    display: none;
 }
 
 #load {
-	text-align: center;
-	font-size: 2.5em;
-	font-family: 'Project Paintball';
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Project Paintball';
 }

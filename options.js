@@ -45,26 +45,26 @@ inkedValue = document.getElementById('setInk');
 offsetValue = document.getElementById('offset');
 
 function saved_status() {
-	document.getElementById("saved").innerHTML = '<div class="saved-inner animated fadeIn">'+chrome.i18n.getMessage("savedMessage")+'</div>';
+    document.getElementById("saved").innerHTML = '<div class="saved-inner animated fadeIn">'+chrome.i18n.getMessage("savedMessage")+'</div>';
 }
 
 timeValue.addEventListener('change', function() {
-	time = timeValue.value;
-	localStorage.setItem("timeFormat", time);
-	saved_status();
+    time = timeValue.value;
+    localStorage.setItem("timeFormat", time);
+    saved_status();
 
 });
 
 regionValue.addEventListener('change', function() {
-	region = regionValue.value;
-	localStorage.setItem("region", region);
-	saved_status();
+    region = regionValue.value;
+    localStorage.setItem("region", region);
+    saved_status();
 });
 
 inkedValue.addEventListener('change', function() {
-	setInk = inkedValue.value;
-	localStorage.setItem("setInk", setInk);
-	saved_status();
+    setInk = inkedValue.value;
+    localStorage.setItem("setInk", setInk);
+    saved_status();
 });
 
 offsetValue.addEventListener('input', function() {

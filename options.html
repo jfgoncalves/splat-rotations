@@ -19,101 +19,101 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Splat Rotations Options</title>
-	<style>
-	body {
-		height: auto;
-	}
-	.saved-inner {
-		background-color: #FFFF97;
-		color: #35383E;
-		font-weight: bolder;
-		padding: 5px;
-		text-align: center;
-		margin: 20px auto 20px; auto;
-		width: 100px;
-		border-radius: 3px;
-	}
+    <meta charset="utf-8">
+    <title>Splat Rotations Options</title>
+    <style>
+    body {
+        height: auto;
+    }
+    .saved-inner {
+        background-color: #FFFF97;
+        color: #35383E;
+        font-weight: bolder;
+        padding: 5px;
+        text-align: center;
+        margin: 20px auto 20px; auto;
+        width: 100px;
+        border-radius: 3px;
+    }
     .animated {
         -webkit-animation-duration: 1s;
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
-    
+
     input[type=number]::-webkit-inner-spin-button {
         opacity: 1;
     }
-    
+
     #warning {
         font-style: italic;
         font-weight: bold;
     }
-    
+
     #warning::before {
         content: url('assets/warning.png');
         padding-right: 5px;
         vertical-align: -20%;
     }
-    
+
     @-webkit-keyframes fadeIn {
         from {
             opacity: 0;
         }
-        
+
         to {
             opacity: 1;
         }
     }
-    
+
     @keyframes fadeIn {
         from {
             opacity: 0;
         }
-    
+
         to {
             opacity: 1;
         }
     }
-    
+
     .fadeIn {
         -webkit-animation-name: fadeIn;
         animation-name: fadeIn;
     }
-	</style>
+    </style>
 </head>
 <body>
     <div id="timeDiv">
-    	<span id="timeFormatLabel"></span>
-    	<select id="timeFormat">
-        	<option id="select1" value="null"></option>
-    		<option id="12hoursLabel" value="12"></option>
-    		<option id="24hoursLabel" value="24"></option>
-    	</select>
-    	<br>
-    	<br>
+        <span id="timeFormatLabel"></span>
+        <select id="timeFormat">
+            <option id="select1" value="null"></option>
+            <option id="12hoursLabel" value="12"></option>
+            <option id="24hoursLabel" value="24"></option>
+        </select>
+        <br>
+        <br>
     </div>
     <div id="regionDiv">
-    	<span id="regionLabel"></span>
-    	<select id="region">
-        	<option id="select2" value="null"></option>
-    		<option id="regionNA" value="na"></option>
-    		<option id="regionEU" value="eu"></option>
-    		<option id="regionJP" value="jp"></option>
-    	</select>
-    	<br>
-    	<br>
+        <span id="regionLabel"></span>
+        <select id="region">
+            <option id="select2" value="null"></option>
+            <option id="regionNA" value="na"></option>
+            <option id="regionEU" value="eu"></option>
+            <option id="regionJP" value="jp"></option>
+        </select>
+        <br>
+        <br>
     </div>
     <div id="thumbDiv">
-    	<span id="mapsThumbnailsLabel"></span>
-    	<select id="setInk">
-        	<option id="select3" value="null"></option>
-    		<option id="mapsInked" value="inked"></option>
-    		<option id="mapsNotInked" value="notInked"></option>
-    	</select>
-    	<br>
-    	<br>
+        <span id="mapsThumbnailsLabel"></span>
+        <select id="setInk">
+            <option id="select3" value="null"></option>
+            <option id="mapsInked" value="inked"></option>
+            <option id="mapsNotInked" value="notInked"></option>
+        </select>
+        <br>
+        <br>
     </div>
     <hr>
     <div id="offsetDiv">
@@ -122,7 +122,7 @@
         <span id="offsetLabel"></span>
         <input type="number" id="offset" name="offset" min="-12" max="12">
     </div>
-	<div id="saved"></div>
-	<script src="options.js"></script>
+    <div id="saved"></div>
+    <script src="options.js"></script>
 </body>
 </html>
