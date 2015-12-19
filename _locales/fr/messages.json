@@ -5,7 +5,7 @@
     },
 
     "appDesc": {
-        "message": "Affiche les rotations actuelles et à venir des maps Splatoon.",
+        "message": "Affiche les rotations actuelles et à venir des stages Splatoon.",
         "description": "The description of the application, displayed in the web store and in Chrome"
     },
 
@@ -25,7 +25,7 @@
     },
 
     "unknown": {
-        "message": "Map Inconnue",
+        "message": "Stage Inconnu",
         "description": "Displayed as a stage name when a stage is not recognized by the extension"
     },
 
@@ -156,7 +156,7 @@
     },
 
     "mapsThumbnailsLabel": {
-        "message": "Miniatures des maps :",
+        "message": "Miniatures des stages :",
         "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
     },
 
