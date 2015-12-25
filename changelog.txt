@@ -1,0 +1,17 @@
+1.2.3:
+    - Fixed tiny typo in Mahi-Mahi Resort German name.
+
+1.2.2:
+    - Fixed French locales.
+    - Mahi-Mahi Resort & Flounder Heights night images added.
+    - Splatfest should now display correctly.
+
+1.2.1:
+    - Added German locale (thanks Bernhard!).
+
+1.2:
+    - Add new option to adjust rotation times manually.
+    - Add support for new 2.4 maps (Piranha Pit, Ancho-V Games).
+
+1.1:
+    Initial release

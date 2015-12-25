@@ -1,0 +1,17 @@
+1.2.3:
+    - Corrige une coquille dans le nom Allemand de Club Ca$halot.
+
+1.2.2:
+    - Correction de termes en Francais.
+    - Ajout des images de nuit Club Ca$halot et Lotissement Filament.
+    - Les Festivals devraient désormais s'afficher correctement.
+
+1.2.1:
+    - Langue Allemand ajouté (merci Bernhard!).
+
+1.2:
+    - Ajout d'une option pour ajuster l'heure des rotations manuellement.
+    - Ajout des maps de la v2.4 (Carrière Caviar, Tentatec Studio).
+
+1.1:
+    Mise en ligne de l'extension.
