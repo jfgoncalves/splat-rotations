@@ -24,7 +24,7 @@ A Chrome extension fetching the current and upcoming Splatoon stages. Powered by
 
 ## The extension is not translated in my language
 
-English and French are fully supported. You can also help [translate the extension](https://poeditor.com/join/project/pwVRLVIrEt) in your language.
+English, German and French are fully supported. You can also help [translate the extension](https://poeditor.com/join/project/pwVRLVIrEt) in your language.
 
 ## I found a bug!
 Nice! Feel free to [create a new issue](https://github.com/jfgoncalves/splat-rotations/issues) so I can fix it asap.
