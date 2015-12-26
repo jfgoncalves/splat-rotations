@@ -34,7 +34,7 @@ The extension currently needs:
 
 * Official night pictures of:
 	* Piranha Pit
-	* Anco-V Games
+	* Ancho-V Games
 * [Full translations](https://poeditor.com/join/project/pwVRLVIrEt) in:
 	* Italian
 	* Spanish
