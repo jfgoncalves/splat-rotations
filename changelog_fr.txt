@@ -1,3 +1,6 @@
+1.2.4:
+    - Images de Carrière Caviar remplacées par les images officielles
+
 1.2.3:
     - Corrige une coquille dans le nom Allemand de Club Ca$halot.
 
