@@ -1,3 +1,5 @@
+1.2.5:
+    - Add Piranha Pit at night asset.
 1.2.4:
     - Updated Piranha Pit assets with official ones.
 

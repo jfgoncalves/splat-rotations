@@ -1,3 +1,5 @@
+1.2.5:
+    - Ajout de l'image de Carrière Caviar de nuit.
 1.2.4:
     - Images de Carrière Caviar remplacées par les images officielles
 
