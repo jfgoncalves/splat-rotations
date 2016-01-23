@@ -1,5 +1,11 @@
+1.2.6:
+    - Updated Ancho-V Games assets with official ones.
+    - Replaced Walleye Warehouse and Piranha Pit night assets with better quality.
+    - Add Ancho-V Games night asset.
+
 1.2.5:
     - Add Piranha Pit at night asset.
+
 1.2.4:
     - Updated Piranha Pit assets with official ones.
 
@@ -19,4 +25,4 @@
     - Add support for new 2.4 maps (Piranha Pit, Ancho-V Games).
 
 1.1:
-    Initial release
+    Initial release.

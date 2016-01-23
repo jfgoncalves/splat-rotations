@@ -1,7 +1,13 @@
+1.2.6:
+    - Images de Tentatec Studio remplacées par les images officielles.
+    - Image de nuit de Encrepôt & Carrière Caviar remplacée par une version de meilleure qualité.
+    - Ajout de l'image de Tentatec Studio de nuit.
+
 1.2.5:
     - Ajout de l'image de Carrière Caviar de nuit.
+
 1.2.4:
-    - Images de Carrière Caviar remplacées par les images officielles
+    - Images de Carrière Caviar remplacées par les images officielles.
 
 1.2.3:
     - Corrige une coquille dans le nom Allemand de Club Ca$halot.
