@@ -32,9 +32,6 @@ Nice! Feel free to [create a new issue](https://github.com/jfgoncalves/splat-rot
 ## I want to contribute. What can I do?
 The extension currently needs:
 
-* Official night pictures of:
-	* Piranha Pit
-	* Ancho-V Games
 * [Full translations](https://poeditor.com/join/project/pwVRLVIrEt) in:
 	* Italian
 	* Spanish
