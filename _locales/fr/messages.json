@@ -115,13 +115,8 @@
         "message": "Carrière Caviar"
     },
 
-    "select": {
-        "message": "Sélectionner...",
-        "description": "Default option in the menus of the options page"
-    },
-
     "timeFormatLabel": {
-        "message": "Format de l'heure :",
+        "message": "Format de l'heure",
         "description": "Title in the options page for chosing the time format"
     },
 
@@ -136,7 +131,7 @@
     },
 
     "regionLabel": {
-        "message": "Région du Festival :",
+        "message": "Région du Festival",
         "description": "Title in the options page for chosing the region of the user"
     },
 
@@ -156,7 +151,7 @@
     },
 
     "mapsThumbnailsLabel": {
-        "message": "Miniatures des stages :",
+        "message": "Miniatures des stages",
         "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
     },
 
@@ -171,12 +166,12 @@
     },
 
     "offsetLabel": {
-        "message": "Corriger l'heure (en heures) :",
+        "message": "Corriger l'heure (en heures)",
         "description": "Title in the options page for setting offset hours"
     },
 
     "offsetWarning": {
-        "message": "Attention: Changez la valeur uniquement si les heures des rotations sont erronés.",
+        "message": "Attention: Changez la valeur uniquement si l'heure des rotations est erronée.",
         "description": "Warning displayed on the offset option"
     },
 

@@ -1,128 +1,84 @@
 <!--
-    Splat Rotations - A Chrome extension fetching the current and upcoming Splatoon stages.
-    Copyright (C) 2015  Jean-François Goncalves
+Splat Rotations - A Chrome extension fetching the current and upcoming Splatoon stages.
+Copyright (C) 2015  Jean-François Goncalves
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Splat Rotations Options</title>
-    <style>
-    body {
-        height: auto;
-    }
-    .saved-inner {
-        background-color: #FFFF97;
-        color: #35383E;
-        font-weight: bolder;
-        padding: 5px;
-        text-align: center;
-        margin: 20px auto 20px; auto;
-        width: 100px;
-        border-radius: 3px;
-    }
-    .animated {
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-    }
-
-    input[type=number]::-webkit-inner-spin-button {
-        opacity: 1;
-    }
-
-    #warning {
-        font-style: italic;
-        font-weight: bold;
-    }
-
-    #warning::before {
-        content: url('assets/warning.png');
-        padding-right: 5px;
-        vertical-align: -20%;
-    }
-
-    @-webkit-keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    .fadeIn {
-        -webkit-animation-name: fadeIn;
-        animation-name: fadeIn;
-    }
-    </style>
-</head>
-<body>
-    <div id="timeDiv">
-        <span id="timeFormatLabel"></span>
-        <select id="timeFormat">
-            <option id="select1" value="null"></option>
-            <option id="12hoursLabel" value="12"></option>
+    <link rel="stylesheet" href="foundation.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="small-12 medium-6 medium-centered columns container">
+        <header>
+          <h1>Splat Rotations options</h1>
+        </header>
+        <section>
+          <label id="timeFormatLabel"></label>
+          <select id="timeFormat">
             <option id="24hoursLabel" value="24"></option>
-        </select>
-        <br>
-        <br>
-    </div>
-    <div id="regionDiv">
-        <span id="regionLabel"></span>
-        <select id="region">
-            <option id="select2" value="null"></option>
+            <option id="12hoursLabel" value="12"></option>
+          </select>
+        </section>
+        <section>
+          <label id="regionLabel"></label>
+          <select id="region">
             <option id="regionNA" value="na"></option>
             <option id="regionEU" value="eu"></option>
             <option id="regionJP" value="jp"></option>
-        </select>
-        <br>
-        <br>
-    </div>
-    <div id="thumbDiv">
-        <span id="mapsThumbnailsLabel"></span>
-        <select id="setInk">
-            <option id="select3" value="null"></option>
+          </select>
+        </section>
+        <section>
+          <label id="mapsThumbnailsLabel"></label>
+          <select id="setInk">
             <option id="mapsInked" value="inked"></option>
             <option id="mapsNotInked" value="notInked"></option>
-        </select>
-        <br>
-        <br>
+          </select>
+        </section>
+        <hr>
+        <section>
+          <span id="warning"></span>
+          <br>
+          <label id="offsetLabel"></label>
+          <input type="number" id="offset" name="offset" min="-12" max="12">
+        </section>
+        <section id="translate">
+          <hr>
+          You're using a partial translation of Splat Rotations. You can <a href="https://poeditor.com/join/project/pwVRLVIrEt">help me with a full translation</a> if you have some spare time. Thank you.
+        </section>
+      </div>
     </div>
-    <hr>
-    <div id="offsetDiv">
-        <span id="warning"></span>
-        <br>
-        <span id="offsetLabel"></span>
-        <input type="number" id="offset" name="offset" min="-12" max="12">
+    <div class="row">
+      <div class="small-12 medium-6 medium-centered columns">
+        <footer>
+          Created by <a href="https://twitter.com/PommePatate">PommePatate</a> • <a href="https://github.com/jfgoncalves/splat-rotations">Github</a> • <a href="http://fizzystack.web.fc2.com/paintball.html">Splatoon font</a> by JapanYoshi.
+        </footer>
+      </div>
     </div>
-    <div id="saved"></div>
-    <script src="options.js"></script>
-</body>
+    <div class="row">
+      <div class="small-2 small-centered columns">
+        <div id="saved"></div>
+      </div>
+    </div>
+  <script src="options.js"></script>
+  </body>
 </html>

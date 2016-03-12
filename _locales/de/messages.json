@@ -115,13 +115,8 @@
         "message": "Steinköhler-Grube"
     },
 
-    "select": {
-        "message": "Wählen...",
-        "description": "Default option in the menus of the options page"
-    },
-
     "timeFormatLabel": {
-        "message": "Zeitformat:",
+        "message": "Zeitformat",
         "description": "Title in the options page for chosing the time format"
     },
 
@@ -136,7 +131,7 @@
     },
 
     "regionLabel": {
-        "message": "Splatfest-Region:",
+        "message": "Splatfest-Region",
         "description": "Title in the options page for chosing the region of the user"
     },
 
@@ -156,7 +151,7 @@
     },
 
     "mapsThumbnailsLabel": {
-        "message": "Stage-Thumbnails:",
+        "message": "Stage-Thumbnails",
         "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
     },
 
@@ -171,7 +166,7 @@
     },
 
     "offsetLabel": {
-        "message": "Zeitverschiebung (in Stunden):",
+        "message": "Zeitverschiebung (in Stunden)",
         "description": "Title in the options page for setting offset hours"
     },
 

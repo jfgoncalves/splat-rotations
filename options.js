@@ -17,22 +17,18 @@
 */
 
 function localize_options() {
-
-document.getElementById('select1').innerHTML = chrome.i18n.getMessage("select");
-document.getElementById('select2').innerHTML = chrome.i18n.getMessage("select");
-document.getElementById('select3').innerHTML = chrome.i18n.getMessage("select");
-document.getElementById('timeFormatLabel').innerHTML = chrome.i18n.getMessage("timeFormatLabel");
-document.getElementById('12hoursLabel').innerHTML = chrome.i18n.getMessage("12hoursLabel");
-document.getElementById('24hoursLabel').innerHTML = chrome.i18n.getMessage("24hoursLabel");
-document.getElementById('regionLabel').innerHTML = chrome.i18n.getMessage("regionLabel");
-document.getElementById('regionJP').innerHTML = chrome.i18n.getMessage("regionJP");
-document.getElementById('regionNA').innerHTML = chrome.i18n.getMessage("regionNA");
-document.getElementById('regionEU').innerHTML = chrome.i18n.getMessage("regionEU");
-document.getElementById('mapsThumbnailsLabel').innerHTML = chrome.i18n.getMessage("mapsThumbnailsLabel");
-document.getElementById('mapsInked').innerHTML = chrome.i18n.getMessage("mapsInked");
-document.getElementById('mapsNotInked').innerHTML = chrome.i18n.getMessage("mapsNotInked");
-document.getElementById('offsetLabel').innerHTML = chrome.i18n.getMessage("offsetLabel");
-document.getElementById('warning').innerHTML = chrome.i18n.getMessage("offsetWarning");
+  document.getElementById('timeFormatLabel').innerHTML = chrome.i18n.getMessage("timeFormatLabel");
+  document.getElementById('12hoursLabel').innerHTML = chrome.i18n.getMessage("12hoursLabel");
+  document.getElementById('24hoursLabel').innerHTML = chrome.i18n.getMessage("24hoursLabel");
+  document.getElementById('regionLabel').innerHTML = chrome.i18n.getMessage("regionLabel");
+  document.getElementById('regionJP').innerHTML = chrome.i18n.getMessage("regionJP");
+  document.getElementById('regionNA').innerHTML = chrome.i18n.getMessage("regionNA");
+  document.getElementById('regionEU').innerHTML = chrome.i18n.getMessage("regionEU");
+  document.getElementById('mapsThumbnailsLabel').innerHTML = chrome.i18n.getMessage("mapsThumbnailsLabel");
+  document.getElementById('mapsInked').innerHTML = chrome.i18n.getMessage("mapsInked");
+  document.getElementById('mapsNotInked').innerHTML = chrome.i18n.getMessage("mapsNotInked");
+  document.getElementById('offsetLabel').innerHTML = chrome.i18n.getMessage("offsetLabel");
+  document.getElementById('warning').innerHTML = chrome.i18n.getMessage("offsetWarning");
 }
 
 localize_options();
@@ -44,51 +40,68 @@ regionValue = document.getElementById('region');
 inkedValue = document.getElementById('setInk');
 offsetValue = document.getElementById('offset');
 
+// Displays saved message when saved.
+
 function saved_status() {
-    document.getElementById("saved").innerHTML = '<div class="saved-inner animated fadeIn">'+chrome.i18n.getMessage("savedMessage")+'</div>';
+  document.getElementById("saved").innerHTML = '<div class="saved-inner animated fadeIn">'+chrome.i18n.getMessage("savedMessage")+'</div>';
 }
 
+// Listeners in case of change.
+
 timeValue.addEventListener('change', function() {
-    time = timeValue.value;
-    localStorage.setItem("timeFormat", time);
-    saved_status();
+  time = timeValue.value;
+  localStorage.setItem("timeFormat", time);
+  saved_status();
 
 });
 
 regionValue.addEventListener('change', function() {
-    region = regionValue.value;
-    localStorage.setItem("region", region);
-    saved_status();
+  region = regionValue.value;
+  localStorage.setItem("region", region);
+  saved_status();
 });
 
 inkedValue.addEventListener('change', function() {
-    setInk = inkedValue.value;
-    localStorage.setItem("setInk", setInk);
-    saved_status();
+  setInk = inkedValue.value;
+  localStorage.setItem("setInk", setInk);
+  saved_status();
 });
 
 offsetValue.addEventListener('input', function() {
-    setOffset = offsetValue.value;
-    localStorage.setItem("offset", setOffset);
-    saved_status();
+  setOffset = offsetValue.value;
+  localStorage.setItem("offset", setOffset);
+  saved_status();
 });
 
 
 // Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
+// stored in localStorage.
 function restore_options() {
-    timeValue.value = localStorage.getItem("timeFormat");
-    regionValue.value = localStorage.getItem("region");
-    inkedValue.value = localStorage.getItem("setInk");
-    if (localStorage.getItem("offset") === null) {
-        localStorage.setItem("offset", 0);
-    }
-    offsetValue.value = localStorage.getItem("offset");
+  if (localStorage.getItem("timeFormat") === null) {
+    localStorage.setItem("timeFormat", 24);
+  }
+  timeValue.value = localStorage.getItem("timeFormat");
+  if (localStorage.getItem("region") === null) {
+    localStorage.setItem("region", "na");
+  }
+  regionValue.value = localStorage.getItem("region");
+  if (localStorage.getItem("setInk") === null) {
+    localStorage.setItem("setInk", "inked");
+  }
+  inkedValue.value = localStorage.getItem("setInk");
+  if (localStorage.getItem("offset") === null) {
+    localStorage.setItem("offset", 0);
+  }
+  offsetValue.value = localStorage.getItem("offset");
 }
+
+// Load localStorage when the page is opened
 
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementsByTagName('html')[0].setAttribute('lang', chrome.i18n.getUILanguage().substring(0, 2));
-if (chrome.i18n.getUILanguage() === 'ja') {
-    document.getElementById('timeDiv').style.display = 'none';
-    document.body.style.height = '110px';
+
+// Shows translation help if partial language
+
+if (chrome.i18n.getUILanguage() === 'es' || 'it' || 'ja') {
+  document.getElementById('translate').style.display = 'block';
 }

@@ -115,13 +115,8 @@
         "message": "Piranha Pit"
     },
 
-    "select": {
-        "message": "Select...",
-        "description": "Default option in the menus of the options page"
-    },
-
     "timeFormatLabel": {
-        "message": "Time format:",
+        "message": "Time format",
         "description": "Title in the options page for chosing the time format"
     },
 
@@ -136,7 +131,7 @@
     },
 
     "regionLabel": {
-        "message": "Splatfest region:",
+        "message": "Splatfest region",
         "description": "Title in the options page for chosing the region of the user"
     },
 
@@ -156,7 +151,7 @@
     },
 
     "mapsThumbnailsLabel": {
-        "message": "Map thumbnails:",
+        "message": "Map thumbnails",
         "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
     },
 
@@ -171,7 +166,7 @@
     },
 
     "offsetLabel": {
-        "message": "Offset (in hours):",
+        "message": "Offset (in hours)",
         "description": "Title in the options page for setting offset hours"
     },
 
