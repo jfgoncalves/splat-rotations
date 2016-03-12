@@ -33,8 +33,9 @@ function localize_options() {
 
 localize_options();
 
-var timeValue, regionValue, inkedValue, offsetValue, time, region, setInk;
+var currentLang, timeValue, regionValue, inkedValue, offsetValue, time, region, setInk;
 
+currentLang = chrome.i18n.getUILanguage();
 timeValue = document.getElementById('timeFormat');
 regionValue = document.getElementById('region');
 inkedValue = document.getElementById('setInk');
@@ -98,16 +99,16 @@ function restore_options() {
 // Load localStorage when the page is opened
 
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementsByTagName('html')[0].setAttribute('lang', chrome.i18n.getUILanguage().substring(0, 2));
+document.getElementsByTagName('html')[0].setAttribute('lang', currentLang.substring(0, 2));
 
 // Shows translation help if partial language
 
-if (chrome.i18n.getUILanguage() === 'es' || 'it' || 'ja') {
+if (currentLang === 'es' || currentLang === 'it' || currentLang === 'ja') {
   document.getElementById('translate').style.display = 'block';
 }
 
 // Disable time management for JA/DE users
 
-if (chrome.i18n.getUILanguage() === 'de' || 'ja') {
+if (currentLang === 'de' || currentLang === 'ja') {
   document.getElementById('timeFormat').disabled = 'true';
 }
