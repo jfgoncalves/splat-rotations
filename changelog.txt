@@ -1,28 +1,34 @@
+1.3:
+  - Updated pattern background in the main popup.
+  - Rewrote entirely the options page.
+  - Partial ES, IT and JA locales have been added (modes & maps).
+  - Adjustments have been made to make for a more woomy experience.
+
 1.2.6:
-    - Updated Ancho-V Games assets with official ones.
-    - Replaced Walleye Warehouse and Piranha Pit night assets with better quality.
-    - Add Ancho-V Games night asset.
+  - Updated Ancho-V Games assets with official ones.
+  - Replaced Walleye Warehouse and Piranha Pit night assets with better quality.
+  - Add Ancho-V Games night asset.
 
 1.2.5:
-    - Add Piranha Pit at night asset.
+  - Add Piranha Pit at night asset.
 
 1.2.4:
-    - Updated Piranha Pit assets with official ones.
+  - Updated Piranha Pit assets with official ones.
 
 1.2.3:
-    - Fixed tiny typo in Mahi-Mahi Resort German name.
+  - Fixed tiny typo in Mahi-Mahi Resort German name.
 
 1.2.2:
-    - Fixed French locales.
-    - Mahi-Mahi Resort & Flounder Heights night images added.
-    - Splatfest should now display correctly.
+  - Fixed French locales.
+  - Mahi-Mahi Resort & Flounder Heights night images added.
+  - Splatfest should now display correctly.
 
 1.2.1:
-    - Added German locale (thanks Bernhard!).
+  - Added German locale (thanks Bernhard!).
 
 1.2:
-    - Add new option to adjust rotation times manually.
-    - Add support for new 2.4 maps (Piranha Pit, Ancho-V Games).
+  - Add new option to adjust rotation times manually.
+  - Add support for new 2.4 maps (Piranha Pit, Ancho-V Games).
 
 1.1:
-    Initial release.
+  Initial release.

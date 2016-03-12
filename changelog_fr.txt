@@ -1,28 +1,34 @@
+1.3:
+  - Mise à jour du motif sur la popup principale.
+  - Refonte totale de la page d'options.
+  - Ajout partiel des langues ES, IT et JA (modes & stages).
+  - Divers ajustements destinés à améliorer l'expérience de l'utilisateur ont été ajoutés.
+
 1.2.6:
-    - Images de Tentatec Studio remplacées par les images officielles.
-    - Image de nuit de Encrepôt & Carrière Caviar remplacée par une version de meilleure qualité.
-    - Ajout de l'image de Tentatec Studio de nuit.
+  - Images de Tentatec Studio remplacées par les images officielles.
+  - Image de nuit de Encrepôt & Carrière Caviar remplacée par une version de meilleure qualité.
+  - Ajout de l'image de Tentatec Studio de nuit.
 
 1.2.5:
-    - Ajout de l'image de Carrière Caviar de nuit.
+  - Ajout de l'image de Carrière Caviar de nuit.
 
 1.2.4:
-    - Images de Carrière Caviar remplacées par les images officielles.
+  - Images de Carrière Caviar remplacées par les images officielles.
 
 1.2.3:
-    - Corrige une coquille dans le nom Allemand de Club Ca$halot.
+  - Corrige une coquille dans le nom Allemand de Club Ca$halot.
 
 1.2.2:
-    - Correction de termes en Francais.
-    - Ajout des images de nuit Club Ca$halot et Lotissement Filament.
-    - Les Festivals devraient désormais s'afficher correctement.
+  - Correction de termes en Francais.
+  - Ajout des images de nuit Club Ca$halot et Lotissement Filament.
+  - Les Festivals devraient désormais s'afficher correctement.
 
 1.2.1:
-    - Langue Allemand ajouté (merci Bernhard!).
+  - Langue Allemand ajouté (merci Bernhard!).
 
 1.2:
-    - Ajout d'une option pour ajuster l'heure des rotations manuellement.
-    - Ajout des maps de la v2.4 (Carrière Caviar, Tentatec Studio).
+  - Ajout d'une option pour ajuster l'heure des rotations manuellement.
+  - Ajout des maps de la v2.4 (Carrière Caviar, Tentatec Studio).
 
 1.1:
-    Mise en ligne de l'extension.
+  Mise en ligne de l'extension.
