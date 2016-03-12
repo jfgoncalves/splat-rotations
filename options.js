@@ -105,3 +105,9 @@ document.getElementsByTagName('html')[0].setAttribute('lang', chrome.i18n.getUIL
 if (chrome.i18n.getUILanguage() === 'es' || 'it' || 'ja') {
   document.getElementById('translate').style.display = 'block';
 }
+
+// Disable time management for JA/DE users
+
+if (chrome.i18n.getUILanguage() === 'de' || 'ja') {
+  document.getElementById('timeFormat').disabled = 'true';
+}
