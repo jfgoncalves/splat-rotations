@@ -115,7 +115,7 @@ function parseFes(json) {
 
     vs = document.createElement('div');
     vs.className = "teams";
-    vs.innerHTML = '<span class="team">'+json.schedule[0].team_alpha_name+'</span><span class="vs"> vs </span><span class="team">'+json.schedule[0].team_bravo_name+'</span';
+    vs.innerHTML = '<span class="team">'+json.schedule[0].team_alpha_name+'</span><span class="vs">&nbsp;vs&nbsp;</span><span class="team">'+json.schedule[0].team_bravo_name+'</span>';
     // Teams color
     document.getElementById('rotations').appendChild(vs);
 

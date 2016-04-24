@@ -16,16 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    width: 400px;
-}
-
 #night {
     background: url('assets/bg-fes.png');
 }
@@ -47,13 +37,6 @@ body {
     margin: 30px auto 30px auto;
 }
 
-.title {
-    color: #fff;
-    font-size: 2em;
-    font-family: 'Project Paintball';
-    margin-top: 20px !important;
-}
-
 .map {
     width: 300px;
     height: 169px;
@@ -67,18 +50,16 @@ body {
 
 .teams {
     margin-top: 10px !important;
-}
-
-.team {
-    color: #fff;
-    font-size: 1.7em;
+    color: #fff !important;
     text-align: center;
-    font-weight: bold;
 }
 
 .vs {
-    color: #fff;
     font-size: 2.5em;
-    text-align: center;
     font-family: "project_paintball";
+}
+
+.team {
+    font-size: 1.7em;
+    font-weight: bold;
 }
