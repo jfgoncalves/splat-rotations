@@ -16,9 +16,11 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-@font-face{
-  font-family:'Project Paintball';
-  src: url('assets/project_paintball.otf');
+@font-face {
+    font-family: 'project_paintball';
+    src: url('assets/project_paintball.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -36,7 +38,7 @@ body {
 h1 {
   color: #272D31;
   font-size: 2.5em;
-  font-family: 'Project Paintball';
+  font-family: "project_paintball";
   text-align: center;
 }
 

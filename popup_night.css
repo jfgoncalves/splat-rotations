@@ -16,10 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-@font-face{
-  font-family:'Project Paintball';
-  src: url('assets/project_paintball.otf');
-}
 
 * {
     margin: 0;
@@ -83,6 +79,6 @@ body {
 .vs {
     color: #fff;
     font-size: 2.5em;
-    font-family: 'Project Paintball';
     text-align: center;
+    font-family: "project_paintball";
 }
