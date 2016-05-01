@@ -106,9 +106,3 @@ document.getElementsByTagName('html')[0].setAttribute('lang', currentLang.substr
 if (currentLang === 'it' || currentLang === 'ja') {
   document.getElementById('translate').style.display = 'block';
 }
-
-// Disable time management for JA/DE users
-
-if (currentLang === 'de' || currentLang === 'ja') {
-  document.getElementById('timeFormat').disabled = 'true';
-}

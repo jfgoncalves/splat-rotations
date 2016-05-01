@@ -33,10 +33,10 @@ function init() {
     if (offset === null) {
         localStorage.setItem("offset", 0);
     }
-    retrieveJSON(url, region);
+    retrieveJSON(url);
 }
 
-function retrieveJSON(url, fes_region) {
+function retrieveJSON(url) {
 
     var AJAX_req, json;
     // URL specific on region
