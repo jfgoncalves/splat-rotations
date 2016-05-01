@@ -175,13 +175,12 @@ function parseRotations(json) {
 
             if (Number([rotation]) === 0) {
                 nextRotation = chrome.i18n.getMessage("currentRotation");
-
-            } else if (currentLang === 'ja' || currentLang === 'de') {
-                nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('ja-JA').replace(':00:00', ':00');
             } else if (localStorage.getItem("timeFormat") === '12') {
                 nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('en-US').replace(':00 ', ' ');
-            } else {
+            } else if (currentLang === 'fr') {
                 nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('fr-FR').replace(':00:00', 'h00');
+            } else {
+                nextRotation = chrome.i18n.getMessage("nextRotation")+" "+startTime.toLocaleTimeString('ja-JA').replace(':00:00', ':00');
             }
 
             // DOM Starting
