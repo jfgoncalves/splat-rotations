@@ -103,7 +103,7 @@ document.getElementsByTagName('html')[0].setAttribute('lang', currentLang.substr
 
 // Shows translation help if partial language
 
-if (currentLang === 'es' || currentLang === 'it' || currentLang === 'ja') {
+if (currentLang === 'it' || currentLang === 'ja') {
   document.getElementById('translate').style.display = 'block';
 }
 

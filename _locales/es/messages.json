@@ -5,37 +5,37 @@
     },
 
     "appDesc": {
-        "message": "Display the current and upcoming Splatoon rotations.",
+        "message": "Muestra las rotaciones actuales y futuras de Splatoon.",
         "description": "The description of the application, displayed in the web store and in Chrome"
     },
 
     "loading": {
-        "message": "Loading...",
+        "message": "Cargando...",
         "description": "Text shown before displaying rotations"
     },
 
     "error": {
-        "message": "Next rotations unavailable at the moment.",
+        "message": "No se pudieron conseguir las rotaciones.",
         "description": "Displayed when the data can't be retrieved"
     },
 
     "noRegion": {
-        "message": "Please set your region in the extension's settings.",
+        "message": "Por favor especifique su región en las opciones de la extensión.",
         "description": "Displayed when the user has no region set"
     },
 
     "unknown": {
-        "message": "Unknown Map",
+        "message": "Mapa desconocido",
         "description": "Displayed as a stage name when a stage is not recognized by the extension"
     },
 
     "nextRotation": {
-        "message": "Next Rotation at",
+        "message": "Siguiente rotación a las",
         "description": "Displayed before each rotation to indicate when is the next one"
     },
 
     "currentRotation": {
-        "message": "Now",
+        "message": "Ahora mismo...",
         "description": "Displayed as the title of the current rotation"
     },
 
@@ -116,67 +116,67 @@
     },
 
     "timeFormatLabel": {
-        "message": "Time format",
+        "message": "Formato del tiempo",
         "description": "Title in the options page for chosing the time format"
     },
 
     "12hoursLabel": {
-        "message": "12 hours",
+        "message": "12 horas",
         "description": "Label in the options page for selecting the 12 hour format"
     },
 
     "24hoursLabel": {
-        "message": "24 hours",
+        "message": "24 horas",
         "description": "Label in the options page for selecting the 24 hour format"
     },
 
     "regionLabel": {
-        "message": "Splatfest region",
+        "message": "Región de Splatfest",
         "description": "Title in the options page for chosing the region of the user"
     },
 
     "regionJP": {
-        "message": "Japan",
+        "message": "Japon",
         "description": "Choice for Japan in the region dropdown option"
     },
 
     "regionNA": {
-        "message": "North America",
+        "message": "América del Norte",
         "description": "Choice for North America in the region dropdown option"
     },
 
     "regionEU": {
-        "message": "Europe/Oceania",
+        "message": "Europa/Oceania",
         "description": "Choice for Europe/Oceania in the region dropdown option"
     },
 
     "mapsThumbnailsLabel": {
-        "message": "Map thumbnails",
+        "message": "Miniatura de los mapas",
         "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
     },
 
     "mapsInked": {
-        "message": "With ink",
+        "message": "Con tinta",
         "description": "Choice for loading the maps thumbnails with ink in them"
     },
 
     "mapsNotInked": {
-        "message": "Without ink",
+        "message": "Sin tinta",
         "description": "Choice for loading the maps thumbnails without ink in them"
     },
 
     "offsetLabel": {
-        "message": "Offset (in hours)",
+        "message": "Retraso (en horas)",
         "description": "Title in the options page for setting offset hours"
     },
 
     "offsetWarning": {
-        "message": "Warning: Only change this if the rotation times are not accurate.",
+        "message": "Atención: Solo cambie esto si el tiempo de las rotación no es preciso.",
         "description": "Warning displayed on the offset option"
     },
 
     "savedMessage": {
-        "message": "Saved.",
+        "message": "Guardado.",
         "description": "Text displayed when an option is successfully changed or set"
     }
 }
