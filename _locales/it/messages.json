@@ -165,6 +165,11 @@
         "description": "Choice for loading the maps thumbnails without ink in them"
     },
 
+    "mapsNight": {
+        "message": "At night",
+        "description": "Choice for loading the maps thumbnails seen at night"
+    },
+
     "offsetLabel": {
         "message": "Offset (in hours)",
         "description": "Title in the options page for setting offset hours"
