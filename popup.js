@@ -26,6 +26,13 @@ function init() {
         offset = localStorage.getItem("offset");
     }
     retrieveJSON(url);
+    // Setting dark theme
+    if (localStorage.getItem("theme") === "dark") {
+        dark_css = document.createElement('link');
+        dark_css.rel = "stylesheet";
+        dark_css.href = "popup-dark.css";
+        document.getElementsByTagName('head')[0].appendChild(dark_css);
+    }
 }
 
 function retrieveJSON(url) {

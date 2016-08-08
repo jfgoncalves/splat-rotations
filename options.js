@@ -24,6 +24,9 @@ function localize_options() {
   document.getElementById('mapsInked').innerHTML = chrome.i18n.getMessage("mapsInked");
   document.getElementById('mapsNotInked').innerHTML = chrome.i18n.getMessage("mapsNotInked");
   document.getElementById('mapsNight').innerHTML = chrome.i18n.getMessage("mapsNight");
+  document.getElementById('themeColorLabel').innerHTML = chrome.i18n.getMessage("themeColorLabel");
+  document.getElementById('light').innerHTML = chrome.i18n.getMessage("light");
+  document.getElementById('dark').innerHTML = chrome.i18n.getMessage("dark");
   document.getElementById('offsetLabel').innerHTML = chrome.i18n.getMessage("offsetLabel");
   document.getElementById('warning').innerHTML = chrome.i18n.getMessage("offsetWarning");
 }
@@ -35,6 +38,7 @@ var currentLang, timeValue, regionValue, inkedValue, offsetValue, time, region, 
 currentLang = chrome.i18n.getUILanguage();
 timeValue = document.getElementById('timeFormat');
 inkedValue = document.getElementById('setInk');
+themeValue = document.getElementById('theme');
 offsetValue = document.getElementById('offset');
 
 // Displays saved message when saved.
@@ -49,12 +53,17 @@ timeValue.addEventListener('change', function() {
   time = timeValue.value;
   localStorage.setItem("timeFormat", time);
   saved_status();
-
 });
 
 inkedValue.addEventListener('change', function() {
   setInk = inkedValue.value;
   localStorage.setItem("setInk", setInk);
+  saved_status();
+});
+
+themeValue.addEventListener('change', function() {
+  theme = themeValue.value;
+  localStorage.setItem("theme", theme);
   saved_status();
 });
 
@@ -72,10 +81,17 @@ function restore_options() {
     localStorage.setItem("timeFormat", 24);
   }
   timeValue.value = localStorage.getItem("timeFormat");
+
   if (localStorage.getItem("setInk") === null) {
     localStorage.setItem("setInk", "inked");
   }
   inkedValue.value = localStorage.getItem("setInk");
+
+  if (localStorage.getItem("theme") === null) {
+      localStorage.setItem("theme", "light")
+  }
+  themeValue.value = localStorage.getItem("theme");
+
   if (localStorage.getItem("offset") === null) {
     localStorage.setItem("offset", 0);
   }

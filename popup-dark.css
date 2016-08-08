@@ -16,50 +16,38 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#night {
-    background: url('assets/background-fes.png');
+body {
+    background: url('assets/background-dark.png');
 }
 
-.fesTitle {
-    width: 400px;
-}
-
-#rotations {
-    text-align: center;
-    padding: 0;
-}
-
-#rotations > div {
-    margin: 0 auto 0 auto;
-}
-
-.fesContainer {
-    margin: 30px auto 30px auto;
-}
-
-.map {
-    width: 300px;
-    height: 169px;
-    border-radius: 4px;
+.time {
+    color: #f7f7f7;
 }
 
 .name {
-    color: #fff;
-    font-size: 1.5em;
+    color: #f7f7f7;
 }
 
-.teams {
-    margin-top: 10px !important;
-    color: #fff !important;
-    text-align: center;
+.mode {
+    color: #f7f7f7;
 }
 
-.vs {
-    font-size: 2.5em;
-    font-family: "project_paintball";
+.splat::before {
+    content: url('assets/modes/splat-dark.png');
 }
 
-.team {
-    font-size: 1.7em;
-    font-weight: bold;
+.tower::before {
+    content: url('assets/modes/tower-dark.png');
+}
+
+.rainmaker::before {
+    content: url('assets/modes/rainmaker-dark.png');
+}
+
+hr {
+    border: 1px solid #f7f7f7;
+}
+
+#load {
+    color: #f7f7f7;
 }
