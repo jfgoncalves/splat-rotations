@@ -170,6 +170,21 @@
         "description": "Choice for loading the maps thumbnails seen at night"
     },
 
+    "themeColorLabel": {
+        "message": "Theme",
+        "description": "Choice for loading theme"
+    },
+
+    "light": {
+        "message": "Light",
+        "description": "Light theme"
+    },
+
+    "dark": {
+        "message": "Dark",
+        "description": "Dark theme"
+    },
+
     "offsetLabel": {
         "message": "Offset (in hours)",
         "description": "Title in the options page for setting offset hours"
