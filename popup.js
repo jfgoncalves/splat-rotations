@@ -18,11 +18,12 @@
 
 function init() {
 
-    offset = localStorage.getItem("offset");
     var url, offset, warning;
     url = 'https://splatoon.ink/schedule.json';
     if (offset === null) {
         localStorage.setItem("offset", 0);
+    } else {
+        offset = localStorage.getItem("offset");
     }
     retrieveJSON(url);
 }
@@ -39,7 +40,6 @@ function retrieveJSON(url) {
     AJAX_req.onreadystatechange = function() {
 
         if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
-
             json = JSON.parse(AJAX_req.responseText);
             parseRotations(json);
         } else if (AJAX_req.readyState == 3) {
