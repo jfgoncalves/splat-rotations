@@ -18,18 +18,10 @@
 
 function init() {
 
-    var region, offset, url, warning;
-    //Send the right URL to the program depending on the region set
     region = localStorage.getItem("region");
     offset = localStorage.getItem("offset");
-    if (region === null || region === "null") {
-        url = 'http://splatapi.ovh/schedule_na.json';
-        warning = document.getElementById("warning");
-        warning.innerHTML = chrome.i18n.getMessage("noRegion");
-        warning.setAttribute("style", "background-color: #FFFF97; text-align: center; height: 30px; line-height: 30px;");
-    } else {
-        url = 'http://splatapi.ovh/schedule_'+region+'.json';
-    }
+    var url, offset, warning;
+    url = 'https://splatoon.ink/schedule.json';
     if (offset === null) {
         localStorage.setItem("offset", 0);
     }
@@ -50,13 +42,7 @@ function retrieveJSON(url) {
         if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
 
             json = JSON.parse(AJAX_req.responseText);
-
-            if (json.festival === true) {
-                parseFes(json);
-
-            } else {
-                parseRotations(json);
-            }
+            parseRotations(json);
         } else if (AJAX_req.readyState == 3) {
             document.getElementById('load').innerHTML = chrome.i18n.getMessage("loading");
         } else {
@@ -93,66 +79,6 @@ function jpNameParser(name) {
     return jp_dic[name];
 }
 
-// Handle Splatfest
-
-function parseFes(json) {
-
-    var fes_css, fesTitle, title, festival, fesDiv, fesImage, fesMapName, fesStageName, fesMapContainer, stage;
-
-    // DOM starting
-    document.getElementById('day').id = "night";
-    document.getElementById('rotations').innerHTML = "";
-
-    fes_css = document.createElement('link');
-    fes_css.rel = "stylesheet";
-    fes_css.href = "popup_night.css";
-    document.getElementsByTagName('head')[0].appendChild(fes_css);
-
-    fesTitle = document.createElement('img');
-    fesTitle.className = "fesTitle";
-    fesTitle.src = "assets/fes.png";
-    document.getElementById('rotations').appendChild(fesTitle);
-
-    vs = document.createElement('div');
-    vs.className = "teams";
-    vs.innerHTML = '<span class="team">'+json.schedule[0].team_alpha_name+'</span><span class="vs">&nbsp;vs&nbsp;</span><span class="team">'+json.schedule[0].team_bravo_name+'</span>';
-    // Teams color
-    document.getElementById('rotations').appendChild(vs);
-
-    // Parsing
-
-    festival = json.schedule[0].stages;
-    fesMapContainer = document.createElement('div');
-
-    for (stage in festival) {
-
-        if (festival.hasOwnProperty(stage)) {
-            fesDiv = document.createElement('div');
-            fesDiv.className = "fesContainer";
-
-            fesStageName = jpNameParser(festival[stage].name);
-
-            fesImage = document.createElement('img');
-            fesImage.className = "map";
-            fesImage.src = "assets/stages/night/"+fesStageName+".jpg";
-            fesDiv.appendChild(fesImage);
-
-            fesImage.onerror = function () {
-                this.onerror = null;
-                this.src = "assets/stages/notfoundfes.jpg";
-            };
-
-            fesMapName = document.createElement('div');
-            fesMapName.className = "name";
-            fesMapName.innerHTML = chrome.i18n.getMessage(fesStageName);
-            fesDiv.appendChild(fesMapName);
-
-            fesMapContainer.appendChild(fesDiv);
-        }
-    }
-    document.getElementById('rotations').appendChild(fesMapContainer);
-}
-
 function parseRotations(json) {
 
     var schedule, offset, currentLang, rotation, startTime, nextRotation, regular, ranked, rankedMode, eachRotation, timeRotation, divRegular, h1Regular, divRanked, h1Ranked, divRankedMode, map, mapName, mapRegular, mapRegularImage, mapRegularText, mapRanked, mapRankedImage, mapRankedText, separator;
@@ -166,12 +92,12 @@ function parseRotations(json) {
     for (rotation in schedule) {
 
         if (schedule.hasOwnProperty(rotation)) {
-            startTime = new Date(schedule[rotation].begin);
+            startTime = new Date(schedule[rotation].startTime);
             startTime.setHours(startTime.getHours()+offset);
 
-            regular = schedule[rotation].stages.regular;
-            ranked = schedule[rotation].stages.ranked;
-            rankedMode = schedule[rotation].ranked_mode;
+            regular = schedule[rotation].regular.maps;
+            ranked = schedule[rotation].ranked.maps;
+            rankedMode = schedule[rotation].ranked.rulesJP;
 
             if (Number([rotation]) === 0) {
                 nextRotation = chrome.i18n.getMessage("currentRotation");
@@ -216,7 +142,7 @@ function parseRotations(json) {
             for (map in regular) {
 
                 if (regular.hasOwnProperty(map)) {
-                    mapName = regular[map].name;
+                    mapName = regular[map].nameJP;
                     mapRegular = document.createElement('div');
                     mapRegular.className = "map"+[map];
 
@@ -256,7 +182,7 @@ function parseRotations(json) {
             for (map in ranked) {
 
                 if (ranked.hasOwnProperty(map)) {
-                    mapName = ranked[map].name;
+                    mapName = ranked[map].nameJP;
                     mapRanked = document.createElement('div');
                     mapRanked.className = "map"+[map];
 
