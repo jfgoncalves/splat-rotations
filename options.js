@@ -20,10 +20,6 @@ function localize_options() {
   document.getElementById('timeFormatLabel').innerHTML = chrome.i18n.getMessage("timeFormatLabel");
   document.getElementById('12hoursLabel').innerHTML = chrome.i18n.getMessage("12hoursLabel");
   document.getElementById('24hoursLabel').innerHTML = chrome.i18n.getMessage("24hoursLabel");
-  document.getElementById('regionLabel').innerHTML = chrome.i18n.getMessage("regionLabel");
-  document.getElementById('regionJP').innerHTML = chrome.i18n.getMessage("regionJP");
-  document.getElementById('regionNA').innerHTML = chrome.i18n.getMessage("regionNA");
-  document.getElementById('regionEU').innerHTML = chrome.i18n.getMessage("regionEU");
   document.getElementById('mapsThumbnailsLabel').innerHTML = chrome.i18n.getMessage("mapsThumbnailsLabel");
   document.getElementById('mapsInked').innerHTML = chrome.i18n.getMessage("mapsInked");
   document.getElementById('mapsNotInked').innerHTML = chrome.i18n.getMessage("mapsNotInked");
@@ -37,7 +33,6 @@ var currentLang, timeValue, regionValue, inkedValue, offsetValue, time, region, 
 
 currentLang = chrome.i18n.getUILanguage();
 timeValue = document.getElementById('timeFormat');
-regionValue = document.getElementById('region');
 inkedValue = document.getElementById('setInk');
 offsetValue = document.getElementById('offset');
 
@@ -54,12 +49,6 @@ timeValue.addEventListener('change', function() {
   localStorage.setItem("timeFormat", time);
   saved_status();
 
-});
-
-regionValue.addEventListener('change', function() {
-  region = regionValue.value;
-  localStorage.setItem("region", region);
-  saved_status();
 });
 
 inkedValue.addEventListener('change', function() {
@@ -82,10 +71,6 @@ function restore_options() {
     localStorage.setItem("timeFormat", 24);
   }
   timeValue.value = localStorage.getItem("timeFormat");
-  if (localStorage.getItem("region") === null) {
-    localStorage.setItem("region", "na");
-  }
-  regionValue.value = localStorage.getItem("region");
   if (localStorage.getItem("setInk") === null) {
     localStorage.setItem("setInk", "inked");
   }

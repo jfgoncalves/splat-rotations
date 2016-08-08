@@ -18,7 +18,6 @@
 
 function init() {
 
-    region = localStorage.getItem("region");
     offset = localStorage.getItem("offset");
     var url, offset, warning;
     url = 'https://splatoon.ink/schedule.json';
