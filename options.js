@@ -23,6 +23,7 @@ function localize_options() {
   document.getElementById('mapsThumbnailsLabel').innerHTML = chrome.i18n.getMessage("mapsThumbnailsLabel");
   document.getElementById('mapsInked').innerHTML = chrome.i18n.getMessage("mapsInked");
   document.getElementById('mapsNotInked').innerHTML = chrome.i18n.getMessage("mapsNotInked");
+  document.getElementById('mapsNight').innerHTML = chrome.i18n.getMessage("mapsNight");
   document.getElementById('offsetLabel').innerHTML = chrome.i18n.getMessage("offsetLabel");
   document.getElementById('warning').innerHTML = chrome.i18n.getMessage("offsetWarning");
 }

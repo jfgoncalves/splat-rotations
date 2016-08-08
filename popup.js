@@ -150,6 +150,8 @@ function parseRotations(json) {
                     mapRegularImage.className = "map";
                     if (localStorage.getItem("setInk") === 'notInked') {
                         mapRegularImage.src = "assets/stages/alpha/"+jpNameParser(mapName)+".jpg";
+                    } else if (localStorage.getItem("setInk") === 'night') {
+                        mapRegularImage.src = "assets/stages/night/"+jpNameParser(mapName)+".jpg";
                     } else {
                         mapRegularImage.src = "assets/stages/day/"+jpNameParser(mapName)+".jpg";
                     }
@@ -190,6 +192,8 @@ function parseRotations(json) {
                     mapRankedImage.className = "map";
                     if (localStorage.getItem("setInk") === 'notInked') {
                         mapRankedImage.src = "assets/stages/alpha/"+jpNameParser(mapName)+".jpg";
+                    } else if (localStorage.getItem("setInk") === 'night') {
+                        mapRankedImage.src = "assets/stages/night/"+jpNameParser(mapName)+".jpg";
                     } else {
                         mapRankedImage.src = "assets/stages/day/"+jpNameParser(mapName)+".jpg";
                     }
