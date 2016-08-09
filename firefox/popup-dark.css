@@ -1,0 +1,53 @@
+/*
+    Splat Rotations - A Chrome extension fetching the current and upcoming Splatoon stages.
+    Copyright (C) 2016  Jean-François Goncalves
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+body {
+    background: url('assets/background-dark.png');
+}
+
+.time {
+    color: #f7f7f7;
+}
+
+.name {
+    color: #f7f7f7;
+}
+
+.mode {
+    color: #f7f7f7;
+}
+
+.splat::before {
+    content: url('assets/modes/splat-dark.png');
+}
+
+.tower::before {
+    content: url('assets/modes/tower-dark.png');
+}
+
+.rainmaker::before {
+    content: url('assets/modes/rainmaker-dark.png');
+}
+
+hr {
+    border: 1px solid #f7f7f7;
+}
+
+#load {
+    color: #f7f7f7;
+}

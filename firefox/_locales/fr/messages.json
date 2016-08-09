@@ -1,0 +1,202 @@
+{
+    "extensionName": {
+        "message": "Splat Rotations",
+        "description": "The title of the application, displayed in the web store and in Chrome"
+    },
+
+    "extensionDescription": {
+        "message": "Affiche les rotations actuelles et à venir des stages Splatoon.",
+        "description": "The description of the application, displayed in the web store and in Chrome"
+    },
+
+    "loading": {
+        "message": "Chargement...",
+        "description": "Text shown before displaying rotations"
+    },
+
+    "error": {
+        "message": "Prochaine rotations indisponibles pour le moment.",
+        "description": "Displayed when the data can't be retrieved"
+    },
+
+    "noRegion": {
+        "message": "Merci de sélectionner une région dans les paramètres de l'extension.",
+        "description": "Displayed when the user has no region set"
+    },
+
+    "unknown": {
+        "message": "Stage Inconnu",
+        "description": "Displayed as a stage name when a stage is not recognized by the extension"
+    },
+
+    "nextRotation": {
+        "message": "Prochaine rotation à",
+        "description": "Displayed before each rotation to indicate when is the next one"
+    },
+
+    "currentRotation": {
+        "message": "En ce moment",
+        "description": "Displayed as the title of the current rotation"
+    },
+
+    "splat": {
+        "message": "Défense de Zone"
+    },
+
+    "tower": {
+        "message": "Expédition Risquée"
+    },
+
+    "rainmaker": {
+        "message": "Mission Bazookarpe"
+    },
+
+    "arowana": {
+        "message": "Centre Arowana"
+    },
+
+    "blackbelly": {
+        "message": "Skatepark Mako"
+    },
+
+    "bluefin": {
+        "message": "Mine Marine"
+    },
+
+    "camp": {
+        "message": "Hippo-Camping"
+    },
+
+    "flounder": {
+        "message": "Lotissement Filament"
+    },
+
+    "hammerhead": {
+        "message": "Pont Esturgeon"
+    },
+
+    "kelp": {
+        "message": "Serre Goémon"
+    },
+
+    "moray": {
+        "message": "Tours Girelle"
+    },
+
+    "port": {
+        "message": "Docks Haddock"
+    },
+
+    "saltspray": {
+        "message": "Station Doucebrise"
+    },
+
+    "urchin": {
+        "message": "Passage Turbot"
+    },
+
+    "walleye": {
+        "message": "Encrepôt"
+    },
+
+    "museum": {
+        "message": "Galeries Guppy"
+    },
+
+    "mahi": {
+        "message": "Club Ca$$halot"
+    },
+
+    "ancho": {
+        "message": "Tentatec Studio"
+    },
+
+    "piranha": {
+        "message": "Carrière Caviar"
+    },
+
+    "timeFormatLabel": {
+        "message": "Format de l'heure",
+        "description": "Title in the options page for chosing the time format"
+    },
+
+    "12hoursLabel": {
+        "message": "12 heures",
+        "description": "Label in the options page for selecting the 12 hour format"
+    },
+
+    "24hoursLabel": {
+        "message": "24 heures",
+        "description": "Label in the options page for selecting the 24 hour format"
+    },
+
+    "regionLabel": {
+        "message": "Région du Festival",
+        "description": "Title in the options page for chosing the region of the user"
+    },
+
+    "regionJP": {
+        "message": "Japon",
+        "description": "Choice for Japan in the region dropdown option"
+    },
+
+    "regionNA": {
+        "message": "Amérique du Nord",
+        "description": "Choice for North America in the region dropdown option"
+    },
+
+    "regionEU": {
+        "message": "Europe / Océanie",
+        "description": "Choice for Europe/Oceania in the region dropdown option"
+    },
+
+    "mapsThumbnailsLabel": {
+        "message": "Miniatures des stages",
+        "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
+    },
+
+    "mapsInked": {
+        "message": "Avec encre",
+        "description": "Choice for loading the maps thumbnails with ink in them"
+    },
+
+    "mapsNotInked": {
+        "message": "Sans encre",
+        "description": "Choice for loading the maps thumbnails without ink in them"
+    },
+
+    "mapsNight": {
+        "message": "De nuit",
+        "description": "Choice for loading the maps thumbnails seen at night"
+    },
+
+    "themeColorLabel": {
+        "message": "Thème",
+        "description": "Choice for loading theme"
+    },
+
+    "light": {
+        "message": "Clair",
+        "description": "Light theme"
+    },
+
+    "dark": {
+        "message": "Sombre",
+        "description": "Dark theme"
+    },
+
+    "offsetLabel": {
+        "message": "Corriger l'heure (en heures)",
+        "description": "Title in the options page for setting offset hours"
+    },
+
+    "offsetWarning": {
+        "message": "Attention: Changez la valeur uniquement si l'heure des rotations est erronée.",
+        "description": "Warning displayed on the offset option"
+    },
+
+    "savedMessage": {
+        "message": "Sauvegardé.",
+        "description": "Text displayed when an option is successfully changed or set"
+    }
+}

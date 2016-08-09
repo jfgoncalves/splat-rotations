@@ -1,0 +1,152 @@
+/*
+    Splat Rotations - A Chrome extension fetching the current and upcoming Splatoon stages.
+    Copyright (C) 2016  Jean-François Goncalves
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+@font-face {
+    font-family: 'project_paintball';
+    src: url('assets/project_paintball.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 400px;
+    height: 100%;
+    background: url('assets/background.png');
+}
+
+img{
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+#refresh {
+    text-align: right;
+    padding: 4px 4px 0 4px;
+    clear: both;
+    cursor: inherit;
+}
+
+#rotations {
+    padding: 0 4px 0 4px;
+}
+
+#rotations > div {
+    margin: 30px auto 30px auto;
+}
+
+#rotations > div:first-child {
+    margin: 15px auto 30px auto;
+}
+
+div.time.rotation0 {
+    margin: 0 auto 10px auto;
+}
+
+.time {
+    margin: 20px auto 0 auto;
+    color: #0393de;
+    font-size: 2em;
+    font-family: 'project_paintball';
+}
+
+.regular, .ranked {
+    margin: 20px auto 30px auto;
+}
+
+.map {
+    width: 194px;
+    height: 109px;
+    border-radius: 2px;
+}
+
+.map0 {
+    margin-right: 4px;
+}
+
+.map0, .map1 {
+    display: inline-block;
+}
+
+h1, .name, .mode, .time {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'project_paintball';
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 3px;
+    color: #2F3335;
+}
+
+.mode {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: -10px;
+    color: #2F3335;
+}
+
+.imgMode {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.splat::before {
+    content: url('assets/modes/splat.png');
+    padding-right: 6px;
+    vertical-align: -25%;
+}
+
+.tower::before {
+    content: url('assets/modes/tower.png');
+    padding-right: 6px;
+    vertical-align: -25%;
+}
+
+.rainmaker::before {
+    content: url('assets/modes/rainmaker.png');
+    padding-right: 6px;
+    vertical-align: -25%;
+}
+
+hr {
+    width: 360px;
+    margin: auto;
+    border: 1px solid #2F3335;
+    opacity: 0.8;
+}
+
+#rotations > div:last-child hr {
+    display: none;
+}
+
+#load {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'project_paintball';
+}

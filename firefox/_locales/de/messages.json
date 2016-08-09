@@ -1,0 +1,202 @@
+{
+    "extensionName": {
+        "message": "Splat Rotations",
+        "description": "The title of the application, displayed in the web store and in Chrome"
+    },
+
+    "extensionDescription": {
+        "message": "Aktuelle und zukünftige Splatoon-Stagerotationen ansehen.",
+        "description": "The description of the application, displayed in the web store and in Chrome"
+    },
+
+    "loading": {
+        "message": "Lade...",
+        "description": "Text shown before displaying rotations"
+    },
+
+    "error": {
+        "message": "Kommende Stageauswahl aktuell nicht verfügbar.",
+        "description": "Displayed when the data can't be retrieved"
+    },
+
+    "noRegion": {
+        "message": "Bitte wähle deine Region in den Plugin-Einstellungen.",
+        "description": "Displayed when the user has no region set"
+    },
+
+    "unknown": {
+        "message": "Unbekannte Stage",
+        "description": "Displayed as a stage name when a stage is not recognized by the extension"
+    },
+
+    "nextRotation": {
+        "message": "Neue Stageauswahl um",
+        "description": "Displayed before each rotation to indicate when is the next one"
+    },
+
+    "currentRotation": {
+        "message": "Jetzt",
+        "description": "Displayed as the title of the current rotation"
+    },
+
+    "splat": {
+        "message": "Herrschaft"
+    },
+
+    "tower": {
+        "message": "Turm-Kommando"
+    },
+
+    "rainmaker": {
+        "message": "Operation Goldfisch"
+    },
+
+    "arowana": {
+        "message": "Arowana-Center"
+    },
+
+    "blackbelly": {
+        "message": "Punkasius-Skatepark"
+    },
+
+    "bluefin": {
+        "message": "Blauflossen-Depot"
+    },
+
+    "camp": {
+        "message": "Camp Schützenfisch"
+    },
+
+    "flounder": {
+        "message": "Schollensiedlung"
+    },
+
+    "hammerhead": {
+        "message": "Makrelenbrücke"
+    },
+
+    "kelp": {
+        "message": "Tümmlerkuppel"
+    },
+
+    "moray": {
+        "message": "Muränentürme"
+    },
+
+    "port": {
+        "message": "Heilbutt-Hafen"
+    },
+
+    "saltspray": {
+        "message": "Bohrinsel Nautilus"
+    },
+
+    "urchin": {
+        "message": "Dekabahnstation"
+    },
+
+    "walleye": {
+        "message": "Kofferfisch-Lager"
+    },
+
+    "museum": {
+        "message": "Pinakoithek"
+    },
+
+    "mahi": {
+        "message": "Mahi-Mahi-Resort"
+    },
+
+    "ancho": {
+        "message": "Anchobit Games HQ"
+    },
+
+    "piranha": {
+        "message": "Steinköhler-Grube"
+    },
+
+    "timeFormatLabel": {
+        "message": "Zeitformat",
+        "description": "Title in the options page for chosing the time format"
+    },
+
+    "12hoursLabel": {
+        "message": "12 Stunden",
+        "description": "Label in the options page for selecting the 12 hour format"
+    },
+
+    "24hoursLabel": {
+        "message": "24 Stunden",
+        "description": "Label in the options page for selecting the 24 hour format"
+    },
+
+    "regionLabel": {
+        "message": "Splatfest-Region",
+        "description": "Title in the options page for chosing the region of the user"
+    },
+
+    "regionJP": {
+        "message": "Japan",
+        "description": "Choice for Japan in the region dropdown option"
+    },
+
+    "regionNA": {
+        "message": "Nordamerika",
+        "description": "Choice for North America in the region dropdown option"
+    },
+
+    "regionEU": {
+        "message": "Europa/Ozeanien",
+        "description": "Choice for Europe/Oceania in the region dropdown option"
+    },
+
+    "mapsThumbnailsLabel": {
+        "message": "Stage-Thumbnails",
+        "description": "Title in the options page for chosing if thumbnails are shown with or without ink"
+    },
+
+    "mapsInked": {
+        "message": "Mit Tinte",
+        "description": "Choice for loading the maps thumbnails with ink in them"
+    },
+
+    "mapsNotInked": {
+        "message": "Ohne Tinte",
+        "description": "Choice for loading the maps thumbnails without ink in them"
+    },
+
+    "mapsNight": {
+        "message": "Nacht",
+        "description": "Choice for loading the maps thumbnails seen at night"
+    },
+
+    "themeColorLabel": {
+        "message": "Aussehen",
+        "description": "Choice for loading theme"
+    },
+
+    "light": {
+        "message": "Hell",
+        "description": "Light theme"
+    },
+
+    "dark": {
+        "message": "Dunkel",
+        "description": "Dark theme"
+    },
+
+    "offsetLabel": {
+        "message": "Zeitverschiebung (in Stunden)",
+        "description": "Title in the options page for setting offset hours"
+    },
+
+    "offsetWarning": {
+        "message": "Achtung: Nur ändern, wenn die Stage-Änderungszeiten nicht korrekt sind.",
+        "description": "Warning displayed on the offset option"
+    },
+
+    "savedMessage": {
+        "message": "Gespeichert.",
+        "description": "Text displayed when an option is successfully changed or set"
+    }
+}

@@ -1,0 +1,85 @@
+<!--
+Splat Rotations - A Chrome extension fetching the current and upcoming Splatoon stages.
+Copyright (C) 2016  Jean-François Goncalves
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splat Rotations Options</title>
+    <link rel="stylesheet" href="foundation.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="small-12 medium-6 medium-centered columns container">
+        <header>
+          <h1>Splat Rotations options</h1>
+        </header>
+        <section>
+          <label id="timeFormatLabel"></label>
+          <select id="timeFormat">
+            <option id="24hoursLabel" value="24"></option>
+            <option id="12hoursLabel" value="12"></option>
+          </select>
+        </section>
+        <section>
+          <label id="mapsThumbnailsLabel"></label>
+          <select id="setInk">
+            <option id="mapsInked" value="inked"></option>
+            <option id="mapsNotInked" value="notInked"></option>
+            <option id="mapsNight" value="night"></option>
+          </select>
+        </section>
+        <section>
+          <label id="themeColorLabel"></label>
+          <select id="theme">
+            <option id="light" value="light"></option>
+            <option id="dark" value="dark"></option>
+          </select>
+        </section>
+        <hr>
+        <section>
+          <span id="warning"></span>
+          <br>
+          <label id="offsetLabel"></label>
+          <input type="number" id="offset" name="offset" min="-12" max="12">
+        </section>
+        <section id="translate">
+          <hr>
+          You're using a partial translation of Splat Rotations. You can <a href="https://poeditor.com/join/project/pwVRLVIrEt">help me with a full translation</a> if you have some spare time. Thank you.
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 medium-6 medium-centered columns">
+        <footer>
+          <p>Created by PommePatate • <a href="https://github.com/jfgoncalves/splat-rotations" target="_blank">Github</a> • <a href="http://fizzystack.web.fc2.com/paintball.html" target="_blank">Splatoon font</a> by JapanYoshi.</p>
+          <p>Thanks (translations): Bernhard (DE), Netux (ES).</p>
+        </footer>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 small-centered columns">
+        <div id="saved"></div>
+      </div>
+    </div>
+  <script src="options.js"></script>
+  </body>
+</html>
