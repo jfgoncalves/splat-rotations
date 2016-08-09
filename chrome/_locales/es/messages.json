@@ -19,11 +19,6 @@
         "description": "Displayed when the data can't be retrieved"
     },
 
-    "noRegion": {
-        "message": "Por favor especifique su región en las opciones de la extensión.",
-        "description": "Displayed when the user has no region set"
-    },
-
     "unknown": {
         "message": "Mapa desconocido",
         "description": "Displayed as a stage name when a stage is not recognized by the extension"
@@ -128,26 +123,6 @@
     "24hoursLabel": {
         "message": "24 horas",
         "description": "Label in the options page for selecting the 24 hour format"
-    },
-
-    "regionLabel": {
-        "message": "Región de Splatfest",
-        "description": "Title in the options page for chosing the region of the user"
-    },
-
-    "regionJP": {
-        "message": "Japon",
-        "description": "Choice for Japan in the region dropdown option"
-    },
-
-    "regionNA": {
-        "message": "América del Norte",
-        "description": "Choice for North America in the region dropdown option"
-    },
-
-    "regionEU": {
-        "message": "Europa/Oceania",
-        "description": "Choice for Europe/Oceania in the region dropdown option"
     },
 
     "mapsThumbnailsLabel": {
