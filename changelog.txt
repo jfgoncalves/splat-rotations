@@ -1,3 +1,7 @@
+1.4.1:
+  - Code cleanup.
+  - Add Firefox extension.
+
 1.4:
   - Updated feed to splatoon.ink because the current API is closing.
   - Added option to choose splatfest thumbnails.
@@ -49,4 +53,4 @@
   - Add support for new 2.4 maps (Piranha Pit, Ancho-V Games).
 
 1.1:
-  Initial release.
+  - Initial release.

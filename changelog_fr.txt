@@ -1,3 +1,7 @@
+1.4.1:
+  - Nettoyage du code.
+  - Ajout de l'extension pour Firefox.
+
 1.4:
   - Flux mis à jour vers splatoon.ink parce que l'API ferme.
   - Ajout d'une option pour utiliser les miniatures des festivals.
@@ -49,4 +53,4 @@
   - Ajout des maps de la v2.4 (Carrière Caviar, Tentatec Studio).
 
 1.1:
-  Mise en ligne de l'extension.
+  - Mise en ligne de l'extension.
